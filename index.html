@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MasterChef 2026 — Kupa Yarışı Skor Tablosu</title>
+<meta name="description" content="MasterChef Türkiye 2026 ana kadro puan tablosu. Şeflerin bireysel değerlendirmelerine dayalı, her bölümden sonra güncellenen sıralama.">
+<meta property="og:title" content="MasterChef 2026 — Kupa Yarışı">
+<meta property="og:description" content="Şeflerin bireysel değerlendirmelerine dayalı, her bölümden sonra güncellenen puan tablosu.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#C4CBCF; --rail:#7C868C; --ink:#0E1214; --ink-soft:#5A656B;
+    --pass:#F4F6F6; --kirmizi:#B72E26; --mavi:#23578F; --flame:#DE7A28; --gain:#1F7A3D;
+    --disp:'Oswald','Arial Narrow',sans-serif;
+    --body:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--steel);
+    background-image:
+      repeating-linear-gradient(90deg,rgba(255,255,255,.20) 0 1px,transparent 1px 3px),
+      linear-gradient(180deg,#CDD3D7 0%,#B9C1C6 100%);
+    background-attachment:fixed;
+    color:var(--ink); font-family:var(--body);
+    padding:26px 18px 48px; min-height:100vh;
+  }
+  .wrap{max-width:960px;margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(32px,7vw,58px);line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin:0}
+  h1 span{color:var(--kirmizi)}
+  .lede{font-size:13.5px;color:var(--ink-soft);margin-top:9px;max-width:64ch;line-height:1.55}
+
+  .stats{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:9px}
+  .stat{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:10px 13px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+  .stat-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .stat-v{font-family:var(--disp);font-size:21px;font-weight:600;text-transform:uppercase;line-height:1.15;margin-top:3px;overflow-wrap:anywhere}
+  .stat-s{font-family:var(--mono);font-size:12px;color:var(--flame);margin-top:1px}
+
+  .sechead{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:13px;letter-spacing:.08em;
+    margin:26px 0 2px;color:var(--ink-soft);border-bottom:1px solid rgba(14,18,20,.20);padding-bottom:5px}
+  .sechead small{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:none;float:right;font-weight:400}
+
+  .rail{position:relative;padding-top:16px}
+  .rail::before{content:'';position:absolute;top:5px;left:0;right:0;height:4px;
+    background:linear-gradient(180deg,#8E979C,var(--rail));border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+
+  .row{position:relative;background:var(--pass);margin-bottom:7px;
+    border:1px solid rgba(14,18,20,.13);border-left:7px solid var(--rail);
+    display:grid;grid-template-columns:44px minmax(0,1fr) 100px 60px;align-items:center;gap:10px;
+    padding:10px 13px 10px 9px;box-shadow:0 1px 2px rgba(0,0,0,.10)}
+  .row.kirmizi{border-left-color:var(--kirmizi);background:linear-gradient(90deg,rgba(183,46,38,.10),var(--pass) 42%)}
+  .row.mavi{border-left-color:var(--mavi);background:linear-gradient(90deg,rgba(35,87,143,.10),var(--pass) 42%)}
+  .row.lead::after{content:'ÖNLÜK';position:absolute;top:-1px;right:-1px;background:var(--ink);color:var(--pass);
+    font-family:var(--mono);font-size:8px;letter-spacing:.16em;padding:2px 6px}
+  .row.quiet{opacity:.62}
+  .row.out{opacity:.42;filter:grayscale(1)}
+  .row.out .name{text-decoration:line-through}
+
+  .rank{text-align:center}
+  .rank-n{font-family:var(--disp);font-size:27px;font-weight:600;line-height:1}
+  .delta{font-family:var(--mono);font-size:10px;margin-top:2px;color:var(--ink-soft)}
+  .delta.up{color:var(--gain)} .delta.dn{color:var(--kirmizi)}
+
+  .name{font-family:var(--disp);font-size:18px;font-weight:500;line-height:1.1}
+  .meta{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);letter-spacing:.05em;margin-top:4px;line-height:1.45}
+  .tag{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;
+    padding:2px 6px;margin-right:6px;color:#fff;vertical-align:1px}
+  .tag.kirmizi{background:var(--kirmizi)}
+  .tag.mavi{background:var(--mavi)}
+  .tag.bilinmiyor{background:var(--rail)}
+  .bar{height:4px;background:rgba(14,18,20,.10);margin-top:7px}
+  .bar i{display:block;height:100%;background:var(--ink)}
+  .row.kirmizi .bar i{background:var(--kirmizi)}
+  .row.mavi .bar i{background:var(--mavi)}
+  .spark{width:100px;height:32px;display:block}
+  .score{text-align:right;font-family:var(--mono);font-weight:600;font-size:22px}
+  .score small{display:block;font-size:10px;font-weight:400;color:var(--ink-soft);margin-top:1px}
+  .score small.up{color:var(--gain)}
+
+  @media (max-width:620px){
+    .row{grid-template-columns:34px minmax(0,1fr) 54px;padding:9px 10px 9px 7px}
+    .spark{display:none}
+    .name{font-size:16px} .rank-n{font-size:22px} .score{font-size:19px}
+  }
+
+  .foot{margin-top:28px;border-top:1px solid rgba(14,18,20,.20);padding-top:14px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .foot h2{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:13px;letter-spacing:.06em;margin:0 0 8px}
+  .scale{font-family:var(--mono);font-size:11px;line-height:1.75}
+  .scale div{display:flex;justify-content:space-between;gap:10px}
+  .scale b{font-weight:600;color:var(--gain)}
+  .scale b.zero{color:var(--ink-soft)}
+  .method{font-size:11.5px;color:var(--ink-soft);line-height:1.65}
+  .stamp{margin-top:22px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-soft);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">TV8 · Sezon 2026 · Bağımsız puan takibi</div>
+  <h1>Kupa <span>Yarışı</span></h1>
+  <p class="lede">Kural tek satır: kazanılan her oyun 1 puan. Kaptanlık, bireysel dokunulmazlık ve takım dokunulmazlığı eşit ağırlıkta. Kaybetmek, potaya girmek ve oylanmak puan kaybettirmez — hiçbir eksi puan yok.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="sechead" id="h1lbl">Puan alanlar <small id="h1cnt"></small></div>
+  <div class="rail" id="rail"></div>
+
+  <div class="sechead" id="h2lbl">Henüz puan almamış <small id="h2cnt"></small></div>
+  <div id="rail2" style="padding-top:8px"></div>
+
+  <div class="sechead" id="h3lbl" style="display:none">Elenenler <small id="h3cnt"></small></div>
+  <div id="rail3" style="padding-top:8px"></div>
+
+  <div class="foot">
+    <div>
+      <h2>Puan cetveli</h2>
+      <div class="scale" id="scale"></div>
+    </div>
+    <div>
+      <h2>Yöntem</h2>
+      <p class="method">Herkes 0 puanla başlar ve kazandığı her oyun için 1 puan alır — kaptanlık, bireysel dokunulmazlık, takım dokunulmazlığı arasında ağırlık farkı yoktur. Eksi puan uygulanmaz. Rozetteki sayı, o yarışmacının kaç kez bireysel olarak değerlendirildiğini gösterir; puanı etkilemez, yalnızca eşit puanlıları sıralar. Takım galibiyetleri kırmızı takımın 10 üyesine aynı şekilde yazıldığı için üst sıralar şu an bireysel performansı değil takım sonucunu yansıtıyor.</p>
+    </div>
+  </div>
+
+  <div class="stamp" id="stamp"></div>
+</div>
+
+<script>
+(function(){
+  var TYPES=[
+    {id:'kaptanlik',lbl:'Kaptanlık oyununu kazandı',d:1,solo:true},
+    {id:'bireysel', lbl:'Bireysel dokunulmazlık aldı',d:1,solo:true},
+    {id:'takimW',   lbl:'Takım dokunulmazlığını kazandı',d:1},
+    {id:'ikinci',   lbl:'Bireysel oyunda finale kaldı',d:0},
+    {id:'ilk7',     lbl:'Şeflerce öne çağrıldı',d:0},
+    {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
+    {id:'pota',     lbl:'Eleme potasına girdi',d:0},
+    {id:'elendi',   lbl:'Elendi',d:0,out:true}
+  ];
+
+  var UPDATED='', ROSTER=[], EPISODES=[];
+
+  function typeOf(id){for(var i=0;i<TYPES.length;i++)if(TYPES[i].id===id)return TYPES[i];return null}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
+
+  function build(){
+    var cur={},solo={},hist={},tags={},potaN={},gone={};
+    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false});
+
+    function ranksNow(){
+      var a=ROSTER.map(function(p){return{n:p.n,s:cur[p.n],q:solo[p.n],g:gone[p.n]}});
+      a.sort(function(x,y){return (x.g===y.g?0:(x.g?1:-1))||(y.s-x.s)||(y.q-x.q)});
+      var r={};a.forEach(function(x,i){r[x.n]=i+1});return r;
+    }
+    var ranks=[ranksNow()];
+
+    EPISODES.forEach(function(ep){
+      ep.evs.forEach(function(ev){
+        var t=typeOf(ev.type);if(!t)return;
+        ev.who.forEach(function(n){
+          if(cur[n]===undefined)return;
+          cur[n]=Math.round((cur[n]+t.d)*10)/10;
+          if(t.solo){solo[n]+=1;tags[n].push(t.lbl)}
+          if(t.id==='pota')potaN[n]+=1;
+          if(t.out)gone[n]=true;
+        });
+      });
+      ROSTER.forEach(function(p){hist[p.n].push(cur[p.n])});
+      ranks.push(ranksNow());
+    });
+
+    var nowR=ranks[ranks.length-1],prevR=ranks[Math.max(0,ranks.length-2)];
+    var prevS={};ROSTER.forEach(function(p){var h=hist[p.n];prevS[p.n]=h[Math.max(0,h.length-2)]});
+
+    var order=ROSTER.slice().sort(function(a,b){
+      return (gone[a.n]===gone[b.n]?0:(gone[a.n]?1:-1))||(cur[b.n]-cur[a.n])||(solo[b.n]-solo[a.n])||a.n.localeCompare(b.n,'tr');
+    });
+    var measured=order.filter(function(p){return cur[p.n]>0&&!gone[p.n]});
+    var unmeasured=order.filter(function(p){return cur[p.n]===0&&!gone[p.n]});
+    var eliminated=order.filter(function(p){return gone[p.n]});
+
+    function spark(v){
+      var w=100,h=32,pad=3;
+      var mn=Math.min.apply(null,v),mx=Math.max.apply(null,v),sp=(mx-mn)||1;
+      var st=v.length>1?(w-pad*2)/(v.length-1):0;
+      var pts=v.map(function(x,i){return (pad+i*st).toFixed(1)+','+(h-pad-((x-mn)/sp)*(h-pad*2)).toFixed(1)});
+      var L=pts[pts.length-1].split(',');
+      var c=v[v.length-1]>v[0]?'#1F7A3D':'#5A656B';
+      return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" aria-hidden="true">'+
+        '<polyline points="'+pts.join(' ')+'" fill="none" stroke="'+c+'" stroke-width="1.7" stroke-linejoin="round"/>'+
+        '<circle cx="'+L[0]+'" cy="'+L[1]+'" r="2.5" fill="'+c+'"/></svg>';
+    }
+
+    var lead=order[0],second=order[1];
+    var gap=second?Math.round((cur[lead.n]-cur[second.n])*10)/10:0;
+    var soloWinners=ROSTER.filter(function(p){return solo[p.n]>0}).length;
+    var up=null,upD=0;
+    ROSTER.forEach(function(p){var d=cur[p.n]-prevS[p.n];if(d>upD){upD=d;up=p}});
+
+    function stat(k,v,s){return '<div class="stat"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
+    document.getElementById('stats').innerHTML=
+      stat('Önlük sırasında',lead.n,cur[lead.n]+' puan')+
+      stat('Arayı açtığı fark',(gap>0?'+':'')+gap,'2. sıraya karşı')+
+      stat('Son bölümün kazananı',upD>0?up.n:'—',(upD>0?'+'+Math.round(upD*10)/10:'0')+' puan')+
+      stat('Bireysel galibiyeti olan',soloWinners+' / '+ROSTER.length,'diğerleri yalnız takım puanı taşıyor')+
+      stat('İşlenen son bölüm',EPISODES.length?EPISODES[EPISODES.length-1].date:'—',EPISODES.length+' bölüm');
+
+    function rowHtml(p,i,quiet){
+      var s=cur[p.n];
+      var dR=(prevR[p.n]||0)-(nowR[p.n]||0);
+      var dS=Math.round((s-prevS[p.n])*10)/10;
+      var mx=cur[order[0].n]||1;
+      var pct=Math.max(3,(s/mx)*100);
+      var arrow=dR>0?'<div class="delta up">▲ '+dR+'</div>':dR<0?'<div class="delta dn">▼ '+Math.abs(dR)+'</div>':'<div class="delta">—</div>';
+      var ds=dS>0?'<small class="up">+'+dS+'</small>':'<small>±0</small>';
+      var line=tags[p.n].length?(solo[p.n]+'× BİREYSEL GALİBİYET'):'Bireysel galibiyet yok';
+      if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
+      if(gone[p.n])line+=' · ELENDİ';
+      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
+        '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
+        '<div><div class="name">'+esc(p.n)+'</div>'+
+          '<div class="meta"><span class="tag '+(p.t==='kirmizi'?'kirmizi':p.t==='mavi'?'mavi':'bilinmiyor')+'">'+
+          (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+esc(line.toUpperCase())+'</div>'+
+          '<div class="bar"><i style="width:'+pct.toFixed(1)+'%"></i></div></div>'+
+        spark(hist[p.n])+
+        '<div class="score">'+s+ds+'</div></div>';
+    }
+
+    document.getElementById('rail').innerHTML=measured.map(function(p,i){return rowHtml(p,i,false)}).join('');
+    document.getElementById('rail2').innerHTML=unmeasured.map(function(p,i){return rowHtml(p,i,true)}).join('');
+    if(eliminated.length){
+      document.getElementById('rail3').innerHTML=eliminated.map(function(p,i){return rowHtml(p,i,true)}).join('');
+      document.getElementById('h3lbl').style.display='block';
+      document.getElementById('h3cnt').textContent=eliminated.length+' kişi';
+    }
+    document.getElementById('h1cnt').textContent=measured.length+' kişi';
+    document.getElementById('h2cnt').textContent=unmeasured.length+' kişi';
+
+    document.getElementById('scale').innerHTML=TYPES.map(function(t){
+      return '<div><span>'+t.lbl+'</span><b class="'+(t.d>0?'':'zero')+'">'+(t.d>0?'+'+t.d:'0')+'</b></div>';
+    }).join('');
+
+    document.getElementById('stamp').textContent='Son güncelleme: '+UPDATED+' · '+EPISODES.length+' bölüm işlendi';
+  }
+
+  function takimAdlari(kod){
+    var t = kod==='@kirmizi' ? 'kirmizi' : 'mavi';
+    return ROSTER.filter(function(p){return p.t===t}).map(function(p){return p.n});
+  }
+
+  function veriyiCoz(d){
+    UPDATED = d.updated || '';
+    ROSTER  = d.roster || [];
+    EPISODES = (d.episodes||[]).map(function(ep){
+      return { date: ep.date, evs: (ep.evs||[]).map(function(ev){
+        return { type: ev.type, who: (typeof ev.who === 'string') ? takimAdlari(ev.who) : (ev.who||[]) };
+      })};
+    });
+  }
+
+  fetch('data.json?v='+Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('data.json okunamadi: '+r.status); return r.json(); })
+    .then(function(d){ veriyiCoz(d); build(); })
+    .catch(function(e){
+      document.getElementById('rail').innerHTML =
+        '<div class="row" style="grid-template-columns:1fr"><div><div class="name">Veri yüklenemedi</div>'+
+        '<div class="meta">'+String(e.message).toUpperCase()+'</div></div></div>';
+      console.error(e);
+    });
+
+})();
+</script>
+</body>
+</html>
