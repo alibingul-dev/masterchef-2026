@@ -1,5 +1,5 @@
 {
-  "updated": "23 Ağustos 2026",
+  "updated": "24 Ağustos 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -541,6 +541,17 @@
           "who": [
             "Şükran Boyraz",
             "Armağan Kırant"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "23 Ağu",
+      "evs": [
+        {
+          "type": "elendi",
+          "who": [
+            "Gül"
           ]
         }
       ]
