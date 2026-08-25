@@ -1,5 +1,5 @@
 {
-  "updated": "24 Ağustos 2026",
+  "updated": "25 Ağustos 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -7,7 +7,7 @@
     },
     {
       "n": "Nilay Özgen",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Hasan Alp Karabacak",
@@ -19,7 +19,7 @@
     },
     {
       "n": "Enes Vardar",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Eyüp Can Güneş",
@@ -35,7 +35,7 @@
     },
     {
       "n": "Şadi Altınay",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Burçin Oğuz",
@@ -43,11 +43,11 @@
     },
     {
       "n": "Tolga Çakuş",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Muhammed Yahya",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Ayşe Nur İnal",
@@ -55,7 +55,7 @@
     },
     {
       "n": "Kübra Satılmış",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Gül",
@@ -75,11 +75,11 @@
     },
     {
       "n": "Armağan Kırant",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Koray Saygı",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Recep Batur",
@@ -87,7 +87,7 @@
     },
     {
       "n": "Emre Can İrkilmez",
-      "t": "yeni"
+      "t": "mavi"
     }
   ],
   "episodes": [
@@ -552,6 +552,17 @@
           "type": "elendi",
           "who": [
             "Gül"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "24 Ağu",
+      "evs": [
+        {
+          "type": "kaptanlik",
+          "who": [
+            "Emre Can İrkilmez"
           ]
         }
       ]
