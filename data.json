@@ -1,5 +1,5 @@
 {
-  "updated": "26 Ağustos 2026",
+  "updated": "27 Ağustos 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -88,6 +88,10 @@
     {
       "n": "Emre Can İrkilmez",
       "t": "mavi"
+    },
+    {
+      "n": "Cansu Şöhret",
+      "t": "yeni"
     }
   ],
   "episodes": [
@@ -614,6 +618,10 @@
           ]
         }
       ]
+    },
+    {
+      "date": "26 Ağu",
+      "evs": []
     }
   ]
 }
