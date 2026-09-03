@@ -1,5 +1,5 @@
 {
-  "updated": "2 Eylül 2026",
+  "updated": "3 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -833,6 +833,54 @@
           "who": [
             "Muhammed Yahya",
             "Koray Saygı"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2 Eyl",
+      "evs": [
+        {
+          "type": "takimW",
+          "who": [
+            "Nilay Özgen",
+            "Hasan Alp Karabacak",
+            "Şiringül Kaya",
+            "Enes Vardar",
+            "Eyüp Can Güneş",
+            "Nurten Tamer Ocak",
+            "Burçin Oğuz",
+            "Tolga Çakuş",
+            "Kübra Satılmış",
+            "Bahar Kaya"
+          ]
+        },
+        {
+          "type": "takimL",
+          "who": [
+            "Batuhan Nazikoğlu",
+            "Şadi Altınay",
+            "Muhammed Yahya",
+            "Ayşe Nur İnal",
+            "Şükran Boyraz",
+            "Armağan Kırant",
+            "Koray Saygı",
+            "Recep Batur",
+            "Emre Can İrkilmez",
+            "Cansu Şöhret"
+          ]
+        },
+        {
+          "type": "bireysel",
+          "who": [
+            "Armağan Kırant"
+          ]
+        },
+        {
+          "type": "pota",
+          "who": [
+            "Şükran Boyraz",
+            "Emre Can İrkilmez"
           ]
         }
       ]
