@@ -142,7 +142,6 @@
     {id:'ilk7',     lbl:'Şeflerce öne çağrıldı',d:0},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
-    {id:'kurtulan', lbl:'Potadan birinci çıktı',d:0},
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
 
@@ -152,8 +151,8 @@
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
 
   function build(){
-    var cur={},solo={},hist={},tags={},potaN={},gone={},kurtulanN={};
-    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false;kurtulanN[p.n]=0});
+    var cur={},solo={},hist={},tags={},potaN={},gone={};
+    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false});
 
     function ranksNow(){
       var a=ROSTER.map(function(p){return{n:p.n,s:cur[p.n],q:solo[p.n],g:gone[p.n]}});
@@ -170,7 +169,6 @@
           cur[n]=Math.round((cur[n]+t.d)*10)/10;
           if(t.solo){solo[n]+=1;tags[n].push(t.lbl)}
           if(t.id==='pota')potaN[n]+=1;
-        if(t.id==='kurtulan')kurtulanN[n]+=1;
           if(t.out)gone[n]=true;
         });
       });
@@ -208,20 +206,16 @@
 
     // Kutu 3 — gecenin sonucu
     var sonucBaslik='Son bölümün sonucu', sonucDeger='—', sonucAlt='puan veren olay yok';
-    var evW=evBul('takimW'), evK=evBul('kurtulan'), evE=evBul('elendi'), evKap=evBul('kaptanlik');
-    if(evW && evW.who.length){
+    var evW=evBul('takimW'), evE=evBul('elendi'), evKap=evBul('kaptanlik');
+    if(evE && evE.who.length){
+      sonucBaslik='Yarışmaya veda eden';
+      sonucDeger=evE.who[0];
+      sonucAlt='eleme gecesi';
+    } else if(evW && evW.who.length){
       var t=takiminiBul(evW.who[0]);
       sonucBaslik='Takım oyununu kazanan';
       sonucDeger=(t==='kirmizi'?'KIRMIZI TAKIM':t==='mavi'?'MAVİ TAKIM':'—');
       sonucAlt=evW.who.length+' kişiye +1 puan';
-    } else if(evK && evK.who.length){
-      sonucBaslik='Potadan birinci çıkan';
-      sonucDeger=evK.who[0];
-      sonucAlt='eleme gecesi';
-    } else if(evE && evE.who.length){
-      sonucBaslik='Yarışmaya veda eden';
-      sonucDeger=evE.who[0];
-      sonucAlt='eleme gecesi';
     } else if(evKap && evKap.who.length){
       sonucBaslik='Kaptanlık oyununu kazanan';
       sonucDeger=evKap.who[0];
@@ -251,8 +245,7 @@
       var ds=dS>0?'<small class="up">+'+dS+'</small>':'<small>±0</small>';
       var line=tags[p.n].length?(solo[p.n]+'× BİREYSEL GALİBİYET'):'Bireysel galibiyet yok';
       if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
-      if(kurtulanN[p.n])line+=' · '+kurtulanN[p.n]+'× POTADAN BİRİNCİ ÇIKTI';
-    if(gone[p.n])line+=' · ELENDİ';
+      if(gone[p.n])line+=' · ELENDİ';
       return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
         '<div><div class="name">'+esc(p.n)+'</div>'+
