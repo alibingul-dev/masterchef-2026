@@ -205,7 +205,7 @@
     function takiminiBul(n){ for(var i=0;i<ROSTER.length;i++) if(ROSTER[i].n===n) return ROSTER[i].t; return null; }
 
     // Kutu 3 — gecenin sonucu
-    var sonucBaslik='Son bölümün sonucu', sonucDeger='—', sonucAlt='puan veren olay yok';
+    var sonucBaslik='Son bölümün sonucu', sonucDeger='—', sonucAlt='—';
     var evW=evBul('takimW'), evE=evBul('elendi'), evKap=evBul('kaptanlik');
     if(evE && evE.who.length){
       sonucBaslik='Yarışmaya veda eden';
@@ -225,7 +225,7 @@
     // Kutu 4 — bireysel dokunulmazlik
     var evB=evBul('bireysel');
     var birDeger = (evB && evB.who.length) ? evB.who[0] : '—';
-    var birAlt   = (evB && evB.who.length) ? '+1 puan' : 'bu bölümde oynanmadı';
+    var birAlt   = (evB && evB.who.length) ? '+1 puan' : '—';
 
     function stat(k,v,s){return '<div class="stat"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
     document.getElementById('stats').innerHTML=
