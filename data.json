@@ -771,6 +771,12 @@
       "date": "30 Ağu",
       "evs": [
         {
+          "type": "kurtulan",
+          "who": [
+            "Nilay Özgen"
+          ]
+        },
+        {
           "type": "elendi",
           "who": [
             "Simge Çıtak"
