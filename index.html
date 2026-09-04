@@ -142,6 +142,7 @@
     {id:'ilk7',     lbl:'Şeflerce öne çağrıldı',d:0},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
+    {id:'kurtulan', lbl:'Potadan ilk kurtulan',d:0},
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
 
@@ -151,8 +152,8 @@
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
 
   function build(){
-    var cur={},solo={},hist={},tags={},potaN={},gone={};
-    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false});
+    var cur={},solo={},hist={},tags={},potaN={},gone={},kurtulanN={};
+    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false;kurtulanN[p.n]=0});
 
     function ranksNow(){
       var a=ROSTER.map(function(p){return{n:p.n,s:cur[p.n],q:solo[p.n],g:gone[p.n]}});
@@ -169,6 +170,7 @@
           cur[n]=Math.round((cur[n]+t.d)*10)/10;
           if(t.solo){solo[n]+=1;tags[n].push(t.lbl)}
           if(t.id==='pota')potaN[n]+=1;
+        if(t.id==='kurtulan')kurtulanN[n]+=1;
           if(t.out)gone[n]=true;
         });
       });
@@ -200,16 +202,43 @@
 
     var lead=order[0],second=order[1];
     var gap=second?Math.round((cur[lead.n]-cur[second.n])*10)/10:0;
-    var soloWinners=ROSTER.filter(function(p){return solo[p.n]>0}).length;
-    var up=null,upD=0;
-    ROSTER.forEach(function(p){var d=cur[p.n]-prevS[p.n];if(d>upD){upD=d;up=p}});
+    var sonEp = EPISODES.length ? EPISODES[EPISODES.length-1] : {date:'—',evs:[]};
+    function evBul(t){ for(var i=0;i<sonEp.evs.length;i++) if(sonEp.evs[i].type===t) return sonEp.evs[i]; return null; }
+    function takiminiBul(n){ for(var i=0;i<ROSTER.length;i++) if(ROSTER[i].n===n) return ROSTER[i].t; return null; }
+
+    // Kutu 3 — gecenin sonucu
+    var sonucBaslik='Son bölümün sonucu', sonucDeger='—', sonucAlt='puan veren olay yok';
+    var evW=evBul('takimW'), evK=evBul('kurtulan'), evE=evBul('elendi'), evKap=evBul('kaptanlik');
+    if(evW && evW.who.length){
+      var t=takiminiBul(evW.who[0]);
+      sonucBaslik='Takım oyununu kazanan';
+      sonucDeger=(t==='kirmizi'?'KIRMIZI TAKIM':t==='mavi'?'MAVİ TAKIM':'—');
+      sonucAlt=evW.who.length+' kişiye +1 puan';
+    } else if(evK && evK.who.length){
+      sonucBaslik='Potadan ilk kurtulan';
+      sonucDeger=evK.who[0];
+      sonucAlt='eleme gecesi';
+    } else if(evE && evE.who.length){
+      sonucBaslik='Yarışmaya veda eden';
+      sonucDeger=evE.who[0];
+      sonucAlt='eleme gecesi';
+    } else if(evKap && evKap.who.length){
+      sonucBaslik='Kaptanlık oyununu kazanan';
+      sonucDeger=evKap.who[0];
+      sonucAlt='+1 puan';
+    }
+
+    // Kutu 4 — bireysel dokunulmazlik
+    var evB=evBul('bireysel');
+    var birDeger = (evB && evB.who.length) ? evB.who[0] : '—';
+    var birAlt   = (evB && evB.who.length) ? '+1 puan' : 'bu bölümde oynanmadı';
 
     function stat(k,v,s){return '<div class="stat"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
     document.getElementById('stats').innerHTML=
       stat('Önlük sırasında',lead.n,cur[lead.n]+' puan')+
       stat('Arayı açtığı fark',(gap>0?'+':'')+gap,'2. sıraya karşı')+
-      stat('Son bölümün kazananı',upD>0?up.n:'—',(upD>0?'+'+Math.round(upD*10)/10:'0')+' puan')+
-      stat('Bireysel galibiyeti olan',soloWinners+' / '+ROSTER.length,'diğerleri yalnız takım puanı taşıyor')+
+      stat(sonucBaslik,sonucDeger,sonucAlt)+
+      stat('Bireysel dokunulmazlık',birDeger,birAlt)+
       stat('İşlenen son bölüm',EPISODES.length?EPISODES[EPISODES.length-1].date:'—',EPISODES.length+' bölüm');
 
     function rowHtml(p,i,quiet){
@@ -222,7 +251,8 @@
       var ds=dS>0?'<small class="up">+'+dS+'</small>':'<small>±0</small>';
       var line=tags[p.n].length?(solo[p.n]+'× BİREYSEL GALİBİYET'):'Bireysel galibiyet yok';
       if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
-      if(gone[p.n])line+=' · ELENDİ';
+      if(kurtulanN[p.n])line+=' · '+kurtulanN[p.n]+'× POTADAN KURTULDU';
+    if(gone[p.n])line+=' · ELENDİ';
       return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
         '<div><div class="name">'+esc(p.n)+'</div>'+
