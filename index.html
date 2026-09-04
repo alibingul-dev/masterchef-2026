@@ -142,7 +142,7 @@
     {id:'ilk7',     lbl:'Şeflerce öne çağrıldı',d:0},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
-    {id:'kurtulan', lbl:'Potadan ilk kurtulan',d:0},
+    {id:'kurtulan', lbl:'Potadan birinci çıktı',d:0},
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
 
@@ -215,7 +215,7 @@
       sonucDeger=(t==='kirmizi'?'KIRMIZI TAKIM':t==='mavi'?'MAVİ TAKIM':'—');
       sonucAlt=evW.who.length+' kişiye +1 puan';
     } else if(evK && evK.who.length){
-      sonucBaslik='Potadan ilk kurtulan';
+      sonucBaslik='Potadan birinci çıkan';
       sonucDeger=evK.who[0];
       sonucAlt='eleme gecesi';
     } else if(evE && evE.who.length){
@@ -251,7 +251,7 @@
       var ds=dS>0?'<small class="up">+'+dS+'</small>':'<small>±0</small>';
       var line=tags[p.n].length?(solo[p.n]+'× BİREYSEL GALİBİYET'):'Bireysel galibiyet yok';
       if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
-      if(kurtulanN[p.n])line+=' · '+kurtulanN[p.n]+'× POTADAN KURTULDU';
+      if(kurtulanN[p.n])line+=' · '+kurtulanN[p.n]+'× POTADAN BİRİNCİ ÇIKTI';
     if(gone[p.n])line+=' · ELENDİ';
       return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
