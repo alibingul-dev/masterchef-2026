@@ -1,5 +1,5 @@
 {
-  "updated": "4 Eylül 2026",
+  "updated": "6 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -92,6 +92,10 @@
     {
       "n": "Cansu Şöhret",
       "t": "kirmizi"
+    },
+    {
+      "n": "Tolgahan Özden",
+      "t": "yeni"
     }
   ],
   "episodes": [
@@ -932,6 +936,58 @@
           ]
         }
       ]
+    },
+    {
+      "date": "4 Eyl",
+      "evs": [
+        {
+          "type": "takimW",
+          "who": [
+            "Batuhan Nazikoğlu",
+            "Şadi Altınay",
+            "Muhammed Yahya",
+            "Ayşe Nur İnal",
+            "Şükran Boyraz",
+            "Armağan Kırant",
+            "Koray Saygı",
+            "Recep Batur",
+            "Emre Can İrkilmez",
+            "Cansu Şöhret"
+          ]
+        },
+        {
+          "type": "takimL",
+          "who": [
+            "Nilay Özgen",
+            "Hasan Alp Karabacak",
+            "Şiringül Kaya",
+            "Enes Vardar",
+            "Eyüp Can Güneş",
+            "Nurten Tamer Ocak",
+            "Burçin Oğuz",
+            "Tolga Çakuş",
+            "Kübra Satılmış",
+            "Bahar Kaya"
+          ]
+        },
+        {
+          "type": "bireysel",
+          "who": [
+            "Hasan Alp Karabacak"
+          ]
+        },
+        {
+          "type": "pota",
+          "who": [
+            "Şiringül Kaya",
+            "Nurten Tamer Ocak"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "5 Eyl",
+      "evs": []
     }
   ]
 }
