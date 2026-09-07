@@ -1,5 +1,5 @@
 {
-  "updated": "6 Eylül 2026",
+  "updated": "7 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -959,6 +959,17 @@
     {
       "date": "5 Eyl",
       "evs": []
+    },
+    {
+      "date": "6 Eyl",
+      "evs": [
+        {
+          "type": "elendi",
+          "who": [
+            "Koray Saygı"
+          ]
+        }
+      ]
     }
   ]
 }
