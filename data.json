@@ -1,5 +1,5 @@
 {
-  "updated": "7 Eylül 2026",
+  "updated": "10 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -11,7 +11,7 @@
     },
     {
       "n": "Hasan Alp Karabacak",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Şiringül Kaya",
@@ -19,11 +19,11 @@
     },
     {
       "n": "Enes Vardar",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Eyüp Can Güneş",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Demirhan Ali",
@@ -51,7 +51,7 @@
     },
     {
       "n": "Ayşe Nur İnal",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Kübra Satılmış",
@@ -71,7 +71,7 @@
     },
     {
       "n": "Şükran Boyraz",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Armağan Kırant",
@@ -91,11 +91,11 @@
     },
     {
       "n": "Cansu Şöhret",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Tolgahan Özden",
-      "t": "yeni"
+      "t": "kirmizi"
     }
   ],
   "episodes": [
@@ -967,6 +967,65 @@
           "type": "elendi",
           "who": [
             "Koray Saygı"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "7 Eyl",
+      "evs": [
+        {
+          "type": "kaptanlik",
+          "who": [
+            "Tolga Çakuş"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "8 Eyl",
+      "evs": [
+        {
+          "type": "takimW",
+          "who": [
+            "Batuhan Nazikoğlu",
+            "Hasan Alp Karabacak",
+            "Enes Vardar",
+            "Eyüp Can Güneş",
+            "Şadi Altınay",
+            "Muhammed Yahya",
+            "Armağan Kırant",
+            "Recep Batur",
+            "Emre Can İrkilmez",
+            "Tolgahan Özden"
+          ]
+        },
+        {
+          "type": "takimL",
+          "who": [
+            "Nilay Özgen",
+            "Şiringül Kaya",
+            "Nurten Tamer Ocak",
+            "Burçin Oğuz",
+            "Tolga Çakuş",
+            "Ayşe Nur İnal",
+            "Kübra Satılmış",
+            "Bahar Kaya",
+            "Şükran Boyraz",
+            "Cansu Şöhret"
+          ]
+        },
+        {
+          "type": "bireysel",
+          "who": [
+            "Bahar Kaya"
+          ]
+        },
+        {
+          "type": "pota",
+          "who": [
+            "Cansu Şöhret",
+            "Nilay Özgen"
           ]
         }
       ]
