@@ -105,7 +105,7 @@
 <div class="wrap">
   <div class="eyebrow">TV8 · Sezon 2026 · Bağımsız puan takibi</div>
   <h1>Kupa <span>Yarışı</span></h1>
-  <p class="lede">Kural tek satır: kazanılan her oyun 1 puan. Kaptanlık, bireysel dokunulmazlık ve takım dokunulmazlığı eşit ağırlıkta. Kaybetmek, potaya girmek ve oylanmak puan kaybettirmez — hiçbir eksi puan yok.</p>
+  <p class="lede">Kural tek satır: bireysel galibiyet 2 puan, takım galibiyeti 1 puan. Kaptanlık, bireysel dokunulmazlık ve takım dokunulmazlığı eşit ağırlıkta. Kaybetmek, potaya girmek ve oylanmak puan kaybettirmez — hiçbir eksi puan yok.</p>
 
   <div class="stats" id="stats"></div>
 
@@ -125,7 +125,7 @@
     </div>
     <div>
       <h2>Yöntem</h2>
-      <p class="method">Herkes 0 puanla başlar ve kazandığı her oyun için 1 puan alır — kaptanlık, bireysel dokunulmazlık, takım dokunulmazlığı arasında ağırlık farkı yoktur. Eksi puan uygulanmaz. Rozetteki sayı, o yarışmacının kaç kez bireysel olarak değerlendirildiğini gösterir; puanı etkilemez, yalnızca eşit puanlıları sıralar. Takım galibiyetleri kırmızı takımın 10 üyesine aynı şekilde yazıldığı için üst sıralar şu an bireysel performansı değil takım sonucunu yansıtıyor.</p>
+      <p class="method">Herkes 0 puanla başlar. Bireysel başarı 2 puan, takım galibiyeti 1 puan değerinde: kaptanlık oyunu ve bireysel dokunulmazlık tek kişilik testlerdir, takım dokunulmazlığı ise on kişiye bölünür. Eksi puan uygulanmaz — kaybetmek, potaya girmek ve oylanmak puan düşürmez. Elenen yarışmacı puanını korur. Ağırlıklar keyfi seçilmedi: elenen dört yarışmacının elendikleri andaki sıralaması ölçüldü ve bu ayar, elenmeyi en tutarlı öngören ayar çıktı.</p>
     </div>
   </div>
 
@@ -135,8 +135,8 @@
 <script>
 (function(){
   var TYPES=[
-    {id:'kaptanlik',lbl:'Kaptanlık oyununu kazandı',d:1,solo:true},
-    {id:'bireysel', lbl:'Bireysel dokunulmazlık aldı',d:1,solo:true},
+    {id:'kaptanlik',lbl:'Kaptanlık oyununu kazandı',d:2,solo:true},
+    {id:'bireysel', lbl:'Bireysel dokunulmazlık aldı',d:2,solo:true},
     {id:'takimW',   lbl:'Takım dokunulmazlığını kazandı',d:1},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
