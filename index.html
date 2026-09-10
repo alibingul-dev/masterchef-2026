@@ -105,7 +105,7 @@
 <div class="wrap">
   <div class="eyebrow">TV8 · Sezon 2026 · Bağımsız puan takibi</div>
   <h1>Kupa <span>Yarışı</span></h1>
-  <p class="lede">Kural tek satır: bireysel galibiyet 2 puan, takım galibiyeti 1 puan. Kaptanlık, bireysel dokunulmazlık ve takım dokunulmazlığı eşit ağırlıkta. Kaybetmek, potaya girmek ve oylanmak puan kaybettirmez — hiçbir eksi puan yok.</p>
+  <p class="lede">Puan riske göre ağırlıklı: kaybeden takımda kazanılan bireysel dokunulmazlık 2.5, kaptanlık oyunu 1.5, takım dokunulmazlığı 0.5. Kaptanlık, bireysel dokunulmazlık ve takım dokunulmazlığı eşit ağırlıkta. Kaybetmek, potaya girmek ve oylanmak puan kaybettirmez — hiçbir eksi puan yok.</p>
 
   <div class="stats" id="stats"></div>
 
@@ -125,7 +125,7 @@
     </div>
     <div>
       <h2>Yöntem</h2>
-      <p class="method">Herkes 0 puanla başlar. Bireysel başarı 2 puan, takım galibiyeti 1 puan değerinde: kaptanlık oyunu ve bireysel dokunulmazlık tek kişilik testlerdir, takım dokunulmazlığı ise on kişiye bölünür. Eksi puan uygulanmaz — kaybetmek, potaya girmek ve oylanmak puan düşürmez. Elenen yarışmacı puanını korur. Ödül oyunu puan vermez — elemeden korumadığı için tabloya girmez, yalnızca satırda rozet olarak görünür. Ağırlıklar keyfi seçilmedi: elenen dört yarışmacının elendikleri andaki sıralaması ölçüldü ve bu ayar, elenmeyi en tutarlı öngören ayar çıktı.</p>
+      <p class="method">Herkes 0 puanla başlar. Puan, oyunun zorluğuna ve riskine göre ağırlıklı: kaybeden takımda oynanan bireysel dokunulmazlık 2.5 puan (potaya girme riski altında, tek başına), kaptanlık oyunu 1.5 puan (tek başına ama risksiz), takım dokunulmazlığı 0.5 puan (on kişiye bölünür). Eksi puan uygulanmaz — kaybetmek, potaya girmek ve oylanmak puan düşürmez. Elenen yarışmacı puanını korur. Ödül oyunu puan vermez, elemeden korumadığı için tabloya girmez; yalnızca satırda rozet olarak görünür. Ağırlıklar keyfi değil: elenen yarışmacıların elendikleri andaki sıralaması ölçülerek kalibre edildi.</p>
     </div>
   </div>
 
@@ -135,9 +135,9 @@
 <script>
 (function(){
   var TYPES=[
-    {id:'kaptanlik',lbl:'Kaptanlık oyununu kazandı',d:2,solo:true},
-    {id:'bireysel', lbl:'Bireysel dokunulmazlık aldı',d:2,solo:true},
-    {id:'takimW',   lbl:'Takım dokunulmazlığını kazandı',d:1},
+    {id:'bireysel', lbl:'Bireysel dokunulmazlık (kaybeden takımda)',d:2.5,solo:true},
+    {id:'kaptanlik',lbl:'Kaptanlık oyununu kazandı',d:1.5,solo:true},
+    {id:'takimW',   lbl:'Takım dokunulmazlığını kazandı',d:0.5},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
     {id:'odulW',    lbl:'Ödül oyununu kazandı (puan vermez)',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
@@ -215,11 +215,11 @@
       var t=takiminiBul(evW.who[0]);
       sonucBaslik='Takım oyununu kazanan';
       sonucDeger=(t==='kirmizi'?'KIRMIZI TAKIM':t==='mavi'?'MAVİ TAKIM':'—');
-      sonucAlt=evW.who.length+' kişiye +1 puan';
+      sonucAlt=evW.who.length+' kişiye +0.5 puan';
     } else if(evKap && evKap.who.length){
       sonucBaslik='Kaptanlık oyununu kazanan';
       sonucDeger=evKap.who[0];
-      sonucAlt='+2 puan';
+      sonucAlt='+1.5 puan';
     } else if(evO && evO.who.length){
       sonucBaslik='Ödül oyununu kazanan';
       sonucDeger=evO.who[0];
@@ -229,7 +229,7 @@
     // Kutu 4 — bireysel dokunulmazlik
     var evB=evBul('bireysel');
     var birDeger = (evB && evB.who.length) ? evB.who[0] : '—';
-    var birAlt   = (evB && evB.who.length) ? '+1 puan' : '—';
+    var birAlt   = (evB && evB.who.length) ? '+2.5 puan' : '—';
 
     function stat(k,v,s){return '<div class="stat"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
     document.getElementById('stats').innerHTML=
@@ -258,7 +258,7 @@
           (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+esc(line.toUpperCase())+'</div>'+
           '<div class="bar"><i style="width:'+pct.toFixed(1)+'%"></i></div></div>'+
         spark(hist[p.n])+
-        '<div class="score">'+s+ds+'</div></div>';
+        '<div class="score">'+(Math.round(s*10)/10)+ds+'</div></div>';
     }
 
     document.getElementById('rail').innerHTML=measured.map(function(p,i){return rowHtml(p,i,false)}).join('');
