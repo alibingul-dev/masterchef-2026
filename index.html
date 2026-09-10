@@ -125,7 +125,7 @@
     </div>
     <div>
       <h2>Yöntem</h2>
-      <p class="method">Herkes 0 puanla başlar. Bireysel başarı 2 puan, takım galibiyeti 1 puan değerinde: kaptanlık oyunu ve bireysel dokunulmazlık tek kişilik testlerdir, takım dokunulmazlığı ise on kişiye bölünür. Eksi puan uygulanmaz — kaybetmek, potaya girmek ve oylanmak puan düşürmez. Elenen yarışmacı puanını korur. Ağırlıklar keyfi seçilmedi: elenen dört yarışmacının elendikleri andaki sıralaması ölçüldü ve bu ayar, elenmeyi en tutarlı öngören ayar çıktı.</p>
+      <p class="method">Herkes 0 puanla başlar. Bireysel başarı 2 puan, takım galibiyeti 1 puan değerinde: kaptanlık oyunu ve bireysel dokunulmazlık tek kişilik testlerdir, takım dokunulmazlığı ise on kişiye bölünür. Eksi puan uygulanmaz — kaybetmek, potaya girmek ve oylanmak puan düşürmez. Elenen yarışmacı puanını korur. Ödül oyunu puan vermez — elemeden korumadığı için tabloya girmez, yalnızca satırda rozet olarak görünür. Ağırlıklar keyfi seçilmedi: elenen dört yarışmacının elendikleri andaki sıralaması ölçüldü ve bu ayar, elenmeyi en tutarlı öngören ayar çıktı.</p>
     </div>
   </div>
 
@@ -139,6 +139,7 @@
     {id:'bireysel', lbl:'Bireysel dokunulmazlık aldı',d:2,solo:true},
     {id:'takimW',   lbl:'Takım dokunulmazlığını kazandı',d:1},
     {id:'takimL',   lbl:'Takım oyunu kaybı',d:0},
+    {id:'odulW',    lbl:'Ödül oyununu kazandı (puan vermez)',d:0},
     {id:'pota',     lbl:'Eleme potasına girdi',d:0},
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
@@ -149,8 +150,8 @@
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
 
   function build(){
-    var cur={},solo={},hist={},tags={},potaN={},gone={};
-    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false});
+    var cur={},solo={},hist={},tags={},potaN={},gone={},odulN={};
+    ROSTER.forEach(function(p){cur[p.n]=0;solo[p.n]=0;hist[p.n]=[0];tags[p.n]=[];potaN[p.n]=0;gone[p.n]=false;odulN[p.n]=0});
 
     function ranksNow(){
       var a=ROSTER.map(function(p){return{n:p.n,s:cur[p.n],q:solo[p.n],g:gone[p.n]}});
@@ -167,6 +168,7 @@
           cur[n]=Math.round((cur[n]+t.d)*10)/10;
           if(t.solo){solo[n]+=1;tags[n].push(t.lbl)}
           if(t.id==='pota')potaN[n]+=1;
+        if(t.id==='odulW')odulN[n]+=1;
           if(t.out)gone[n]=true;
         });
       });
@@ -204,7 +206,7 @@
 
     // Kutu 3 — gecenin sonucu
     var sonucBaslik='Son bölümün sonucu', sonucDeger='—', sonucAlt='—';
-    var evW=evBul('takimW'), evE=evBul('elendi'), evKap=evBul('kaptanlik');
+    var evW=evBul('takimW'), evE=evBul('elendi'), evKap=evBul('kaptanlik'), evO=evBul('odulW');
     if(evE && evE.who.length){
       sonucBaslik='Yarışmaya veda eden';
       sonucDeger=evE.who[0];
@@ -217,7 +219,11 @@
     } else if(evKap && evKap.who.length){
       sonucBaslik='Kaptanlık oyununu kazanan';
       sonucDeger=evKap.who[0];
-      sonucAlt='+1 puan';
+      sonucAlt='+2 puan';
+    } else if(evO && evO.who.length){
+      sonucBaslik='Ödül oyununu kazanan';
+      sonucDeger=evO.who[0];
+      sonucAlt='puan vermez';
     }
 
     // Kutu 4 — bireysel dokunulmazlik
@@ -242,7 +248,8 @@
       var arrow=dR>0?'<div class="delta up">▲ '+dR+'</div>':dR<0?'<div class="delta dn">▼ '+Math.abs(dR)+'</div>':'<div class="delta">—</div>';
       var ds=dS>0?'<small class="up">+'+dS+'</small>':'<small>±0</small>';
       var line=tags[p.n].length?(solo[p.n]+'× BİREYSEL GALİBİYET'):'Bireysel galibiyet yok';
-      if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
+      if(odulN[p.n])line+=' · '+odulN[p.n]+'× ÖDÜL OYUNU';
+    if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
       if(gone[p.n])line+=' · ELENDİ';
       return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
