@@ -1,13 +1,13 @@
 {
-  "updated": "14 Eylül 2026",
+  "updated": "15 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Nilay Özgen",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Hasan Alp Karabacak",
@@ -19,7 +19,7 @@
     },
     {
       "n": "Enes Vardar",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Eyüp Can Güneş",
@@ -39,15 +39,15 @@
     },
     {
       "n": "Burçin Oğuz",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Tolga Çakuş",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Muhammed Yahya",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Ayşe Nur İnal",
@@ -55,7 +55,7 @@
     },
     {
       "n": "Kübra Satılmış",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Gül",
@@ -67,15 +67,15 @@
     },
     {
       "n": "Bahar Kaya",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Şükran Boyraz",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Armağan Kırant",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Koray Saygı",
@@ -83,11 +83,11 @@
     },
     {
       "n": "Recep Batur",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Emre Can İrkilmez",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Cansu Şöhret",
@@ -95,6 +95,10 @@
     },
     {
       "n": "Tolgahan Özden",
+      "t": "mavi"
+    },
+    {
+      "n": "Faruk",
       "t": "kirmizi"
     }
   ],
@@ -1192,6 +1196,17 @@
           "type": "elendi",
           "who": [
             "Cansu Şöhret"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "14 Eyl",
+      "evs": [
+        {
+          "type": "kaptanlik",
+          "who": [
+            "Armağan Kırant"
           ]
         }
       ]
