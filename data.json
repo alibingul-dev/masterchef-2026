@@ -1,5 +1,5 @@
 {
-  "updated": "15 Eylül 2026",
+  "updated": "16 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
@@ -1207,6 +1207,54 @@
           "type": "kaptanlik",
           "who": [
             "Armağan Kırant"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "15 Eyl",
+      "evs": [
+        {
+          "type": "takimW",
+          "who": [
+            "Nilay Özgen",
+            "Hasan Alp Karabacak",
+            "Eyüp Can Güneş",
+            "Şadi Altınay",
+            "Burçin Oğuz",
+            "Tolga Çakuş",
+            "Kübra Satılmış",
+            "Bahar Kaya",
+            "Şükran Boyraz",
+            "Faruk"
+          ]
+        },
+        {
+          "type": "takimL",
+          "who": [
+            "Batuhan Nazikoğlu",
+            "Şiringül Kaya",
+            "Enes Vardar",
+            "Nurten Tamer Ocak",
+            "Muhammed Yahya",
+            "Ayşe Nur İnal",
+            "Armağan Kırant",
+            "Recep Batur",
+            "Emre Can İrkilmez",
+            "Tolgahan Özden"
+          ]
+        },
+        {
+          "type": "bireysel",
+          "who": [
+            "Emre Can İrkilmez"
+          ]
+        },
+        {
+          "type": "pota",
+          "who": [
+            "Şiringül Kaya",
+            "Tolgahan Özden"
           ]
         }
       ]
