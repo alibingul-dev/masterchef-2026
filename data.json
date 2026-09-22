@@ -1,13 +1,13 @@
 {
-  "updated": "21 Eylül 2026",
+  "updated": "22 Eylül 2026",
   "roster": [
     {
       "n": "Batuhan Nazikoğlu",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Nilay Özgen",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Hasan Alp Karabacak",
@@ -15,15 +15,15 @@
     },
     {
       "n": "Şiringül Kaya",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Enes Vardar",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Eyüp Can Güneş",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Demirhan Ali",
@@ -31,7 +31,7 @@
     },
     {
       "n": "Nurten Tamer Ocak",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Şadi Altınay",
@@ -43,7 +43,7 @@
     },
     {
       "n": "Tolga Çakuş",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Muhammed Yahya",
@@ -67,15 +67,15 @@
     },
     {
       "n": "Bahar Kaya",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Şükran Boyraz",
-      "t": "kirmizi"
+      "t": "mavi"
     },
     {
       "n": "Armağan Kırant",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Koray Saygı",
@@ -83,7 +83,7 @@
     },
     {
       "n": "Recep Batur",
-      "t": "mavi"
+      "t": "kirmizi"
     },
     {
       "n": "Emre Can İrkilmez",
@@ -1421,6 +1421,17 @@
           "type": "elendi",
           "who": [
             "Faruk"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "21 Eyl",
+      "evs": [
+        {
+          "type": "kaptanlik",
+          "who": [
+            "Şükran Boyraz"
           ]
         }
       ]
