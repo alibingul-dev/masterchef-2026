@@ -1435,6 +1435,53 @@
           ]
         }
       ]
+    },
+    {
+      "date": "22 Eyl",
+      "evs": [
+        {
+          "type": "takimW",
+          "who": [
+            "Şükran Boyraz",
+            "Nilay Özgen",
+            "Eyüp Can Güneş",
+            "Tolga Çakuş",
+            "Muhammed Yahya",
+            "Ayşe Nur İnal",
+            "Bahar Kaya",
+            "Emre Can İrkilmez",
+            "Tolgahan Özden"
+          ]
+        },
+        {
+          "type": "takimL",
+          "who": [
+            "Şiringül Kaya",
+            "Batuhan Nazikoğlu",
+            "Hasan Alp Karabacak",
+            "Enes Vardar",
+            "Nurten Tamer Ocak",
+            "Şadi Altınay",
+            "Burçin Oğuz",
+            "Kübra Satılmış",
+            "Armağan Kırant",
+            "Recep Batur"
+          ]
+        },
+        {
+          "type": "bireysel",
+          "who": [
+            "Burçin Oğuz"
+          ]
+        },
+        {
+          "type": "pota",
+          "who": [
+            "Recep Batur",
+            "Armağan Kırant"
+          ]
+        }
+      ]
     }
   ]
 }
