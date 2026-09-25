@@ -1,5 +1,5 @@
 {
-  "updated": "23 Eylül 2026",
+  "updated": "24 Eylül 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "mavi" },
@@ -72,6 +72,7 @@
     { "date": "20 Eyl", "evs": [ { "type": "elendi", "who": ["Faruk"] } ] },
     { "date": "21 Eyl", "evs": [ { "type": "kaptanlik", "who": ["Şükran Boyraz"] } ] },
     { "date": "22 Eyl", "evs": [ { "type": "takimW", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Şiringül Kaya","Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "bireysel", "who": ["Burçin Oğuz"] }, { "type": "pota", "who": ["Recep Batur","Armağan Kırant"] } ] },
-    { "date": "23 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "takimL", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Eyüp Can Güneş","Nilay Özgen"] } ] }
+    { "date": "23 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "takimL", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Eyüp Can Güneş","Nilay Özgen"] } ] },
+    { "date": "24 Eyl", "evs": [ { "type": "takimW", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Şiringül Kaya","Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "bireysel", "who": ["Şiringül Kaya"] }, { "type": "pota", "who": ["Enes Vardar","Hasan Alp Karabacak"] } ] }
   ]
 }
