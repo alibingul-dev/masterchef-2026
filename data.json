@@ -1,5 +1,5 @@
 {
-  "updated": "5 Ekim 2026",
+  "updated": "6 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "kirmizi" },
@@ -83,6 +83,7 @@
     { "date": "1 Eki", "evs": [ { "type": "takimW", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "takimL", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Şiringül Kaya","Buse Baştan"] } ] },
     { "date": "2 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "takimL", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "bireysel", "who": ["Tolgahan Özden"] }, { "type": "pota", "who": ["Batuhan Nazikoğlu","Nurten Tamer Ocak"] } ] },
     { "date": "3 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "takimL", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Şükran Boyraz","Tolgahan Özden"] } ] },
-    { "date": "4 Eki", "evs": [ { "type": "elendi", "who": ["Batuhan Nazikoğlu"] } ] }
+    { "date": "4 Eki", "evs": [ { "type": "elendi", "who": ["Batuhan Nazikoğlu"] } ] },
+    { "date": "5 Eki", "evs": [ { "type": "odulW", "who": ["Tolgahan Özden"] } ] }
   ]
 }
