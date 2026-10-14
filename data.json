@@ -1,5 +1,5 @@
 {
-  "updated": "13 Ekim 2026",
+  "updated": "14 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "mavi" },
@@ -91,6 +91,7 @@
     { "date": "9 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Kübra Satılmış"] }, { "type": "pota", "who": ["Hasan Alp Karabacak","Şadi Altınay"] } ] },
     { "date": "10 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Enes Vardar","Kübra Satılmış"] } ] },
     { "date": "11 Eki", "evs": [ { "type": "elendi", "who": ["Buse Baştan"] } ] },
-    { "date": "12 Eki", "evs": [ { "type": "kaptanlik", "who": ["Muhammed Yahya"] } ] }
+    { "date": "12 Eki", "evs": [ { "type": "kaptanlik", "who": ["Muhammed Yahya"] } ] },
+    { "date": "13 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Şadi Altınay"] }, { "type": "pota", "who": ["Şiringül Kaya","Hasan Alp Karabacak"] } ] }
   ]
 }
