@@ -1,5 +1,5 @@
 {
-  "updated": "16 Ekim 2026",
+  "updated": "17 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "mavi" },
@@ -94,6 +94,7 @@
     { "date": "12 Eki", "evs": [ { "type": "kaptanlik", "who": ["Muhammed Yahya"] } ] },
     { "date": "13 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Şadi Altınay"] }, { "type": "pota", "who": ["Şiringül Kaya","Hasan Alp Karabacak"] } ] },
     { "date": "14 Eki", "evs": [ { "type": "odulW", "who": ["Ayşe Nur İnal"] } ] },
-    { "date": "15 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Tolga Çakuş"] }, { "type": "pota", "who": ["Burçin Oğuz","Nurten Tamer Ocak"] } ] }
+    { "date": "15 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Tolga Çakuş"] }, { "type": "pota", "who": ["Burçin Oğuz","Nurten Tamer Ocak"] } ] },
+    { "date": "16 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Ayşe Nur İnal"] }, { "type": "pota", "who": ["Tolga Çakuş","Tolgahan Özden"] } ] }
   ]
 }
