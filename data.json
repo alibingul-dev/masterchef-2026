@@ -1,25 +1,25 @@
 {
-  "updated": "19 Ekim 2026",
+  "updated": "20 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
-    { "n": "Nilay Özgen", "t": "mavi" },
-    { "n": "Hasan Alp Karabacak", "t": "mavi" },
+    { "n": "Nilay Özgen", "t": "kirmizi" },
+    { "n": "Hasan Alp Karabacak", "t": "kirmizi" },
     { "n": "Şiringül Kaya", "t": "mavi" },
-    { "n": "Enes Vardar", "t": "mavi" },
+    { "n": "Enes Vardar", "t": "kirmizi" },
     { "n": "Eyüp Can Güneş", "t": "mavi" },
     { "n": "Demirhan Ali", "t": "mavi" },
     { "n": "Nurten Tamer Ocak", "t": "kirmizi" },
     { "n": "Şadi Altınay", "t": "mavi" },
     { "n": "Burçin Oğuz", "t": "kirmizi" },
-    { "n": "Tolga Çakuş", "t": "kirmizi" },
+    { "n": "Tolga Çakuş", "t": "mavi" },
     { "n": "Muhammed Yahya", "t": "mavi" },
-    { "n": "Ayşe Nur İnal", "t": "kirmizi" },
-    { "n": "Kübra Satılmış", "t": "kirmizi" },
+    { "n": "Ayşe Nur İnal", "t": "mavi" },
+    { "n": "Kübra Satılmış", "t": "mavi" },
     { "n": "Gül", "t": "mavi" },
     { "n": "Simge Çıtak", "t": "mavi" },
-    { "n": "Bahar Kaya", "t": "kirmizi" },
+    { "n": "Bahar Kaya", "t": "mavi" },
     { "n": "Şükran Boyraz", "t": "mavi" },
-    { "n": "Armağan Kırant", "t": "mavi" },
+    { "n": "Armağan Kırant", "t": "kirmizi" },
     { "n": "Koray Saygı", "t": "kirmizi" },
     { "n": "Recep Batur", "t": "kirmizi" },
     { "n": "Emre Can İrkilmez", "t": "kirmizi" },
@@ -97,6 +97,7 @@
     { "date": "15 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Tolga Çakuş"] }, { "type": "pota", "who": ["Burçin Oğuz","Nurten Tamer Ocak"] } ] },
     { "date": "16 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Ayşe Nur İnal"] }, { "type": "pota", "who": ["Tolga Çakuş","Tolgahan Özden"] } ] },
     { "date": "17 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Şükran Boyraz","Enes Vardar"] } ] },
-    { "date": "18 Eki", "evs": [ { "type": "elendi", "who": ["Şiringül Kaya"] } ] }
+    { "date": "18 Eki", "evs": [ { "type": "elendi", "who": ["Şiringül Kaya"] } ] },
+    { "date": "19 Eki", "evs": [ { "type": "kaptanlik", "who": ["Şadi Altınay"] } ] }
   ]
 }
