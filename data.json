@@ -1,5 +1,5 @@
 {
-  "updated": "20 Ekim 2026",
+  "updated": "21 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "kirmizi" },
@@ -98,6 +98,7 @@
     { "date": "16 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Ayşe Nur İnal"] }, { "type": "pota", "who": ["Tolga Çakuş","Tolgahan Özden"] } ] },
     { "date": "17 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Şükran Boyraz","Enes Vardar"] } ] },
     { "date": "18 Eki", "evs": [ { "type": "elendi", "who": ["Şiringül Kaya"] } ] },
-    { "date": "19 Eki", "evs": [ { "type": "kaptanlik", "who": ["Şadi Altınay"] } ] }
+    { "date": "19 Eki", "evs": [ { "type": "kaptanlik", "who": ["Şadi Altınay"] } ] },
+    { "date": "20 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Burçin Oğuz"] }, { "type": "pota", "who": ["Enes Vardar","Emre Can İrkilmez"] } ] }
   ]
 }
