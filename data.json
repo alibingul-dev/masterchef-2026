@@ -1,5 +1,5 @@
 {
-  "updated": "28 Ekim 2026",
+  "updated": "29 Ekim 2026",
   "roster": [
     { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
     { "n": "Nilay Özgen", "t": "mavi" },
@@ -106,6 +106,7 @@
     { "date": "24 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Tolgahan Özden","Hasan Alp Karabacak"] } ] },
     { "date": "25 Eki", "evs": [ { "type": "elendi", "who": ["Emre Can İrkilmez"] } ] },
     { "date": "26 Eki", "evs": [ { "type": "kaptanlik", "who": ["Kübra Satılmış"] } ] },
-    { "date": "27 Eki", "evs": [ { "type": "takimW", "who": ["Kübra Satılmış","Burçin Oğuz","Tolga Çakuş","Eyüp Can Güneş","Bahar Kaya","Nilay Özgen","Şadi Altınay","Ayşe Nur İnal"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Muhammed Yahya","Şükran Boyraz","Nurten Tamer Ocak","Enes Vardar","Armağan Kırant","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Nurten Tamer Ocak","Enes Vardar"] } ] }
+    { "date": "27 Eki", "evs": [ { "type": "takimW", "who": ["Kübra Satılmış","Burçin Oğuz","Tolga Çakuş","Eyüp Can Güneş","Bahar Kaya","Nilay Özgen","Şadi Altınay","Ayşe Nur İnal"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Muhammed Yahya","Şükran Boyraz","Nurten Tamer Ocak","Enes Vardar","Armağan Kırant","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Nurten Tamer Ocak","Enes Vardar"] } ] },
+    { "date": "28 Eki", "evs": [ { "type": "takimW", "who": ["Kübra Satılmış","Burçin Oğuz","Tolga Çakuş","Eyüp Can Güneş","Bahar Kaya","Nilay Özgen","Şadi Altınay","Ayşe Nur İnal"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Muhammed Yahya","Şükran Boyraz","Nurten Tamer Ocak","Enes Vardar","Armağan Kırant","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Tolgahan Özden"] }, { "type": "pota", "who": ["Şükran Boyraz","Hasan Alp Karabacak"] } ] }
   ]
 }
