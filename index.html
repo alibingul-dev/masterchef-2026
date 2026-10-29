@@ -36,14 +36,27 @@
   h1 span{color:var(--kirmizi)}
   .lede{font-size:13.5px;color:var(--ink-soft);margin-top:9px;max-width:64ch;line-height:1.55}
 
-  .top{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;align-items:start}
+  .top{display:grid;grid-template-columns:250px minmax(0,1fr) 300px;gap:16px;align-items:start}
+  .side{display:flex;flex-direction:column;gap:9px;margin-top:8px}
+  .pl{margin-top:4px}
+  .pl div{display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-top:1px solid rgba(14,18,20,.08);padding:4px 0}
+  .pl div:first-child{border-top:0}
+  .pl b{font-family:var(--disp);font-size:16px;font-weight:600;text-transform:uppercase;line-height:1.15}
+  .pl span{font-family:var(--mono);font-size:10.5px;color:var(--flame);text-align:right}
+  .met{font-size:11.5px;color:var(--ink-soft);line-height:1.6;background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:10px 13px;margin-top:8px}
+  .met b{color:var(--ink)}
+  .itt{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:11px 14px}
+  .itt h3{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:13px;letter-spacing:.06em;margin:0 0 6px}
+  .itt .g{margin:8px 0 2px;padding-left:10px;border-left:6px solid var(--ic)}
+  .itt .g b{font-family:var(--disp);font-size:15px;text-transform:uppercase}
+  .itt .g i{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink);margin:2px 0}
+  .itt .g p{margin:2px 0 0;font-size:12px;color:var(--ink-soft);line-height:1.5}
+  .yorum h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 4px}
   .stats{margin-top:8px;display:flex;flex-direction:column;gap:7px}
   .stat{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:9px 13px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
   .stat.star{border-left:5px solid var(--flame)}
   .stat .tulum{display:inline-block;background:var(--kirmizi);color:#fff;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;padding:2px 6px;margin-left:6px;vertical-align:1px}
-  .weekgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:10px;margin-top:8px;align-items:stretch}
-  .weekgrid .week{margin-top:0}
-  .weekgrid:has(#yorum[hidden]){grid-template-columns:1fr}
+  
   .yorum{background:var(--pass);border:1px solid rgba(14,18,20,.14);border-left:5px solid var(--flame);padding:11px 14px}
   .yorum h3{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:13px;letter-spacing:.06em;margin:0 0 6px}
   .yorum ul{margin:0;padding-left:16px;font-size:12.5px;line-height:1.55}
@@ -59,10 +72,11 @@
   .guc td.v{font-family:var(--mono);text-align:right;width:62px}
   .guc td.v.pos{color:var(--gain)} .guc td.v.neg{color:var(--kirmizi)}
   .guc tr.kap td:first-child::after{content:' (K)';font-family:var(--mono);font-size:10px;color:var(--ink-soft)}
-  .sifat{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-    color:var(--flame);border:1px solid rgba(222,122,40,.55);padding:1px 6px;margin-left:8px;vertical-align:3px}
+  .sifat{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:#fff;background:var(--flame);padding:2px 7px;margin-left:9px;vertical-align:3px;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .sa{font-size:11.5px;color:var(--ink);font-style:italic;margin-top:3px;line-height:1.4}
   @media (max-width:860px){
-    .top,.weekgrid,.guc{grid-template-columns:1fr}
+    .top,.guc{grid-template-columns:1fr}
   }
   .stat-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
   .stat-v{font-family:var(--disp);font-size:21px;font-weight:600;text-transform:uppercase;line-height:1.15;margin-top:3px;overflow-wrap:anywhere}
@@ -84,9 +98,11 @@
   .row.mavi{border-left-color:var(--mavi);background:linear-gradient(90deg,rgba(35,87,143,.10),var(--pass) 42%)}
   .row.lead::after{content:'ÖNLÜK';position:absolute;top:-1px;right:-1px;background:var(--ink);color:var(--pass);
     font-family:var(--mono);font-size:8px;letter-spacing:.16em;padding:2px 6px}
-  .row.potada{border-left-color:transparent}
-  .row.potada::before{content:'';position:absolute;left:-7px;top:-1px;bottom:-1px;width:7px;
-    background:repeating-linear-gradient(180deg,var(--pc,var(--rail)) 0 7px,var(--ink) 7px 14px)}
+  .pstripe{position:absolute;left:0;right:0;bottom:-1px;height:5px;
+    background:repeating-linear-gradient(90deg,var(--pc,var(--rail)) 0 14px,var(--ink) 14px 28px)}
+  .row.itt-u{border-left-color:transparent}
+  .row.itt-u::before{content:'';position:absolute;left:-7px;top:-1px;bottom:-1px;width:7px;
+    background:repeating-linear-gradient(180deg,var(--ic) 0 7px,var(--ink) 7px 14px)}
   .row.potada.kirmizi{--pc:var(--kirmizi)}
   .row.potada.mavi{--pc:var(--mavi)}
   .tag.pota{background:var(--ink)}
@@ -246,12 +262,25 @@
     </div>
     <div>
       <div class="sechead" id="wklbl">Haftayı kazanma ihtimali <small id="wkcnt"></small></div>
-      <div class="weekgrid">
-        <div class="week" id="week"></div>
-        <div class="yorum" id="yorum" hidden></div>
-      </div>
+      <div class="week" id="week"></div>
       <div class="sechead">Takım güçleri <small id="guccnt"></small></div>
       <div class="guc" id="guc"></div>
+      <div class="met" id="gucmet">
+        <b>Güç nasıl hesaplanıyor?</b> Sezonun tüm takım oyunları (kim hangi takımdaydı, hangi takım kazandı) bir lojistik modele verilir.
+        Takımlar her hafta karıştığı için, aynı kişinin farklı kadrolardaki galibiyet/mağlubiyetinden kişiye özel bir katkı ayrıştırılabilir.
+        Bir oyunu A takımının kazanma ihtimali <b>1 / (1 + e<sup>−(A'nın ort. gücü − B'nin ort. gücü)</sup>)</b>; güçler bu ihtimal geçmiş sonuçlara en iyi uyacak şekilde ayarlanır.
+        Az oyunla aşırı uç değer çıkmasın diye her güç sıfıra doğru hafifçe çekilir (L2, λ = 0,15).
+        Tablodaki sayı gücün 100 katı: <b>0 = ortalama yarışmacı</b>, +100 ≈ takımına ortalamanın belirgin üstünde katkı.
+        Bireysel puanlar bu hesaba girmez; yalnız takım oyunu sonuçları kullanılır.
+        Doğrulama: her hafta yalnız önceki haftalarla eğitilip o haftanın oyunları tahmin ediliyor (sonuç ihtimal kutusunun altında).
+      </div>
+    </div>
+    <div>
+      <div class="sechead">Haberler ve gözlem <small id="yorumTarih"></small></div>
+      <div class="side">
+        <div class="yorum" id="yorum" hidden></div>
+        <div class="itt" id="itt" hidden></div>
+      </div>
     </div>
   </div>
 
@@ -290,7 +319,7 @@
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
 
-  var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null;
+  var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null, ITT=[], ITT_UYE={};
 
   function typeOf(id){for(var i=0;i<TYPES.length;i++)if(TYPES[i].id===id)return TYPES[i];return null}
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
@@ -387,25 +416,33 @@
     });
 
     function stat(k,v,s,cls,ekHtml){return '<div class="stat'+(cls?' '+cls:'')+'"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+(ekHtml||'')+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
-    // Kutular — gunluk pota: direkt / oylama
-    var evP=evBul('pota'), potaKart='';
-    if(evP && evP.who.length){
-      var potaToplam=Object.keys(potada).length, alt='bu hafta potada: '+potaToplam+' kişi';
-      var det=evP.detay||[];
-      var dir=det.filter(function(x){return x.yol==='direkt'}), oy=det.filter(function(x){return x.yol==='oy'});
-      if(dir.length||oy.length){
-        dir.forEach(function(x){
-          potaKart+=stat('Direkt potaya gönderilen',x.n,x.gonderen?x.gonderen+' gönderdi':alt,'pota');
+    // Kutular — bu haftanin potasi: direkt / oylama (son elemeden bu yana)
+    var dirL=[],oyL=[],detaysiz=[];
+    EPISODES.forEach(function(ep,i){
+      if(i<=sonEleme)return;
+      ep.evs.forEach(function(ev){
+        if(ev.type!=='pota')return;
+        var det=ev.detay||[];
+        ev.who.forEach(function(n){
+          var x=null;det.forEach(function(d){if(d.n===n)x=d});
+          if(!x)detaysiz.push({n:n,date:ep.date});
+          else if(x.yol==='direkt')dirL.push({n:n,date:ep.date,s:(x.gonderen?x.gonderen+' gönderdi':'direkt')});
+          else {
+            var tulum=(x.oy&&x.toplam&&x.oy===x.toplam);
+            oyL.push({n:n,date:ep.date,s:((x.oy!=null&&x.toplam)?x.oy+'/'+x.toplam+' oy':(x.not||'oylama ile'))+(tulum?' · TULUM ÇIKARDI':''),tulum:tulum});
+          }
         });
-        oy.forEach(function(x){
-          var tulum=(x.oy&&x.toplam&&x.oy===x.toplam);
-          var s=(x.oy!=null&&x.toplam)?x.oy+'/'+x.toplam+' oy':(x.not||'oylama ile');
-          potaKart+=stat('Oylama ile gönderilen',x.n,s+(tulum?' · tüm oyları aldı':''),'pota',tulum?'<span class="tulum">TULUM ÇIKARDI</span>':'');
-        });
-      } else {
-        potaKart=stat('Potaya gönderilen',evP.who.join(' · '),alt,'pota');
-      }
+      });
+    });
+    function listeKart(k,L){
+      return '<div class="stat pota"><div class="stat-k">'+k+'</div><div class="pl">'+
+        L.map(function(x){return '<div><b>'+esc(x.n)+(x.tulum?'<span class="tulum">TULUM</span>':'')+'</b><span>'+esc(x.date)+'<br>'+esc(x.s)+'</span></div>'}).join('')+
+        '</div></div>';
     }
+    var potaKart='';
+    if(dirL.length)potaKart+=listeKart('Potaya direkt gönderilen',dirL);
+    if(oyL.length)potaKart+=listeKart('Oylama ile gönderilen',oyL);
+    if(detaysiz.length)potaKart+=listeKart('Potaya gönderilen',detaysiz.map(function(x){return{n:x.n,date:x.date,s:''}}));
 
     // Yukselen yildiz: son 3 haftada (kaptanlik bazli) en cok sira atlayan; esitlikte en cok puan
     var kapIdx=[];EPISODES.forEach(function(ep,i){ep.evs.forEach(function(ev){if(ev.type==='kaptanlik')kapIdx.push(i)})});
@@ -443,11 +480,13 @@
     if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
       if(gone[p.n])line+=' · ELENDİ';
       var potaTag=potada[p.n]?'<span class="tag pota">POTADA</span>':'';
-      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
+      var it=ITT_UYE[p.n];
+      var ittTag=it?'<span class="tag" style="background:'+esc(it.renk)+'">'+esc(it.ad.toLocaleUpperCase('tr'))+'</span>':'';
+      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(it?' itt-u':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'"'+(it?' style="--ic:'+esc(it.renk)+'"':'')+'>'+(potada[p.n]?'<i class="pstripe"></i>':'')+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
-        '<div><div class="name">'+esc(p.n)+(p.s?'<span class="sifat">'+esc(p.s)+'</span>':'')+'</div>'+
+        '<div><div class="name">'+esc(p.n)+(p.s?'<span class="sifat">'+esc(p.s)+'</span>':'')+'</div>'+(p.sa?'<div class="sa">'+esc(p.sa)+'</div>':'')+
           '<div class="meta"><span class="tag '+(p.t==='kirmizi'?'kirmizi':p.t==='mavi'?'mavi':'bilinmiyor')+'">'+
-          (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+potaTag+esc(line.toUpperCase())+'</div>'+
+          (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+potaTag+ittTag+esc(line.toUpperCase())+'</div>'+
           '<div class="bar"><i style="width:'+pct.toFixed(1)+'%"></i></div></div>'+
         spark(hist[p.n])+
         '<div class="score">'+(Math.round(s*10)/10)+ds+'</div></div>';
@@ -573,14 +612,28 @@
     document.getElementById('guc').innerHTML=tablo(ad(rA,'Takım A'),A,rA)+tablo(ad(rB,'Takım B'),B,rB);
     document.getElementById('guccnt').textContent='0 = ortalama · (K) kaptan';
 
-    // Haftanin yorumu (data.json → yorum)
+    // Haberler ve gozlem (data.json → yorum)
     var yb=document.getElementById('yorum');
-    if(YORUM&&YORUM.maddeler&&YORUM.maddeler.length){
-      yb.innerHTML='<h3>'+esc(YORUM.baslik||'Yorum')+'</h3><ul>'+YORUM.maddeler.map(function(m){return '<li>'+esc(m)+'</li>'}).join('')+'</ul>'+
+    function liste(a){return '<ul>'+a.map(function(m){return '<li>'+esc(m)+'</li>'}).join('')+'</ul>'}
+    if(YORUM&&((YORUM.haberler&&YORUM.haberler.length)||(YORUM.gozlem&&YORUM.gozlem.length)||(YORUM.maddeler&&YORUM.maddeler.length))){
+      yb.innerHTML='<h3>'+esc(YORUM.baslik||'Haberler ve gözlem')+'</h3>'+
+        (YORUM.haberler&&YORUM.haberler.length?'<h4>Haberlerden</h4>'+liste(YORUM.haberler):'')+
+        (YORUM.gozlem&&YORUM.gozlem.length?'<h4>Gözlemim · nereye gidiyor</h4>'+liste(YORUM.gozlem):'')+
+        (YORUM.maddeler&&YORUM.maddeler.length?liste(YORUM.maddeler):'')+
         (YORUM.kaynaklar&&YORUM.kaynaklar.length?'<div class="src">Kaynak: '+YORUM.kaynaklar.map(function(k){
           return /^https:\/\//.test(k.url||'')?'<a href="'+esc(k.url)+'" target="_blank" rel="noopener">'+esc(k.ad)+'</a>':esc(k.ad)}).join(' · ')+'</div>':'');
       yb.hidden=false;
+      document.getElementById('yorumTarih').textContent=YORUM.tarih||'';
     } else { yb.hidden=true; }
+
+    // Gizli ittifaklar
+    var ib=document.getElementById('itt');
+    if(ITT.length){
+      ib.innerHTML='<h3>Gizli ittifaklar</h3>'+ITT.map(function(g){
+        return '<div class="g" style="--ic:'+esc(g.renk)+'"><b>'+esc(g.ad)+'</b><i>'+esc((g.uyeler||[]).join(' · '))+'</i><p>'+esc(g.aciklama||'')+(g.teyit?' ('+esc(g.teyit)+')':'')+'</p></div>';
+      }).join('')+'<div class="src" style="font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:7px">Üyelerin satırında sol dikey şerit ittifak rengindedir.</div>';
+      ib.hidden=false;
+    } else { ib.hidden=true; }
   }
 
   function takimAdlari(kod){
@@ -597,6 +650,9 @@
       })};
     });
     YORUM = d.yorum || null;
+    ITT = d.ittifaklar || [];
+    ITT_UYE = {};
+    ITT.forEach(function(g){(g.uyeler||[]).forEach(function(n){ITT_UYE[n]=g})});
   }
 
   fetch('data.json?v='+Date.now())
