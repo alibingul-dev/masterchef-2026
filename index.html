@@ -58,6 +58,24 @@
   .row.mavi{border-left-color:var(--mavi);background:linear-gradient(90deg,rgba(35,87,143,.10),var(--pass) 42%)}
   .row.lead::after{content:'ÖNLÜK';position:absolute;top:-1px;right:-1px;background:var(--ink);color:var(--pass);
     font-family:var(--mono);font-size:8px;letter-spacing:.16em;padding:2px 6px}
+  .row.potada{border-left-color:transparent}
+  .row.potada::before{content:'';position:absolute;left:-7px;top:-1px;bottom:-1px;width:7px;
+    background:repeating-linear-gradient(180deg,var(--pc,var(--rail)) 0 7px,var(--ink) 7px 14px)}
+  .row.potada.kirmizi{--pc:var(--kirmizi)}
+  .row.potada.mavi{--pc:var(--mavi)}
+  .tag.pota{background:var(--ink)}
+  .stat.pota{border-left:5px solid var(--ink)}
+  .stat.pota .stat-v{font-size:17px}
+
+  .week{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:12px 14px;margin-top:8px}
+  .wk-row{display:grid;grid-template-columns:120px minmax(0,1fr) 54px;align-items:center;gap:10px;margin:6px 0}
+  .wk-name{font-family:var(--disp);font-size:15px;font-weight:600;text-transform:uppercase}
+  .wk-name small{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;color:var(--ink-soft);text-transform:none}
+  .wk-bar{height:12px;background:rgba(14,18,20,.10)}
+  .wk-bar i{display:block;height:100%;background:var(--ink)}
+  .wk-bar i.kirmizi{background:var(--kirmizi)} .wk-bar i.mavi{background:var(--mavi)}
+  .wk-pct{font-family:var(--mono);font-weight:600;font-size:18px;text-align:right}
+  .wk-note{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-top:8px;line-height:1.5}
   .row.quiet{opacity:.62}
   .row.out{opacity:.42;filter:grayscale(1)}
   .row.out .name{text-decoration:line-through}
@@ -197,6 +215,9 @@
 
   <div class="stats" id="stats"></div>
 
+  <div class="sechead" id="wklbl">Haftayı kazanma ihtimali <small id="wkcnt"></small></div>
+  <div class="week" id="week"></div>
+
   <div class="sechead" id="h1lbl">Puan alanlar <small id="h1cnt"></small></div>
   <div class="rail" id="rail"></div>
 
@@ -319,13 +340,31 @@
     var birDeger = (evB && evB.who.length) ? evB.who[0] : '—';
     var birAlt   = (evB && evB.who.length) ? '+2.5 puan' : '—';
 
-    function stat(k,v,s){return '<div class="stat"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
+    // Su an potada olanlar: son elemeden sonra potaya girip elenmeyenler
+    var sonEleme=-1;
+    EPISODES.forEach(function(ep,i){ep.evs.forEach(function(ev){if(ev.type==='elendi')sonEleme=i})});
+    var potada={};
+    EPISODES.forEach(function(ep,i){
+      if(i<=sonEleme)return;
+      ep.evs.forEach(function(ev){if(ev.type==='pota')ev.who.forEach(function(n){if(!gone[n])potada[n]=true})});
+    });
+
+    function stat(k,v,s,cls){return '<div class="stat'+(cls?' '+cls:'')+'"><div class="stat-k">'+k+'</div><div class="stat-v">'+esc(v)+'</div><div class="stat-s">'+esc(s)+'</div></div>'}
+    // Kutu — gunluk pota
+    var evP=evBul('pota'), potaKart='';
+    if(evP && evP.who.length){
+      var potaToplam=Object.keys(potada).length;
+      potaKart=stat('Potaya gönderilen',evP.who.join(' · '),'bu hafta potada: '+potaToplam+' kişi','pota');
+    }
     document.getElementById('stats').innerHTML=
       stat('Önlük sırasında',lead.n,cur[lead.n]+' puan')+
       stat('Arayı açtığı fark',(gap>0?'+':'')+gap,'2. sıraya karşı')+
       stat(sonucBaslik,sonucDeger,sonucAlt)+
       stat('Bireysel dokunulmazlık',birDeger,birAlt)+
+      potaKart+
       stat('İşlenen son bölüm',EPISODES.length?EPISODES[EPISODES.length-1].date:'—',EPISODES.length+' bölüm');
+
+    haftaOlasilik();
 
     function rowHtml(p,i,quiet){
       var s=cur[p.n];
@@ -339,11 +378,12 @@
       if(odulN[p.n])line+=' · '+odulN[p.n]+'× ÖDÜL OYUNU';
     if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
       if(gone[p.n])line+=' · ELENDİ';
-      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
+      var potaTag=potada[p.n]?'<span class="tag pota">POTADA</span>':'';
+      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'">'+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
         '<div><div class="name">'+esc(p.n)+'</div>'+
           '<div class="meta"><span class="tag '+(p.t==='kirmizi'?'kirmizi':p.t==='mavi'?'mavi':'bilinmiyor')+'">'+
-          (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+esc(line.toUpperCase())+'</div>'+
+          (p.t==='kirmizi'?'KIRMIZI':p.t==='mavi'?'MAVİ':'TAKIM YOK')+'</span>'+potaTag+esc(line.toUpperCase())+'</div>'+
           '<div class="bar"><i style="width:'+pct.toFixed(1)+'%"></i></div></div>'+
         spark(hist[p.n])+
         '<div class="score">'+(Math.round(s*10)/10)+ds+'</div></div>';
@@ -364,6 +404,84 @@
     }).join('');
 
     document.getElementById('stamp').textContent='Son güncelleme: '+UPDATED+' · '+EPISODES.length+' bölüm işlendi';
+  }
+
+  // ===== Haftayi kazanma ihtimali =====
+  // Her yarismaciya gecmis takim oyunlarindan bir guc katsayisi (theta) ogrenilir:
+  // P(A kazanir) = 1/(1+exp(-(ort.theta_A - ort.theta_B))). Takimlar her hafta karistigi icin
+  // bireysel katki ayristirilabilir. Hafta = kaptanlik + N takim oyunu; cok galibiyet alan haftayi alir.
+  function haftaOlasilik(){
+    var box=document.getElementById('week');
+    function overlap(a,b){var s={},k=0;a.forEach(function(n){s[n]=1});b.forEach(function(n){if(s[n])k++});return k}
+
+    var oyunlar=[],haftalar=[],cur=null;
+    EPISODES.forEach(function(ep){
+      var W=null,L=null;
+      ep.evs.forEach(function(ev){
+        if(ev.type==='kaptanlik'){cur={oyun:[]};haftalar.push(cur)}
+        if(ev.type==='takimW')W=ev.who; if(ev.type==='takimL')L=ev.who;
+      });
+      if(W&&L&&W.length&&L.length){
+        var g={W:W,L:L};oyunlar.push(g);
+        if(!cur){cur={oyun:[]};haftalar.push(cur)}
+        cur.oyun.push(g);
+      }
+    });
+
+    // theta tahmini: L2 duzenlemeli lojistik, gradyan yukselisi
+    var th={};ROSTER.forEach(function(p){th[p.n]=0});
+    var LAM=0.15,LR=0.5;
+    function ort(t){var s=0;t.forEach(function(n){s+=th[n]||0});return s/t.length}
+    for(var it=0;it<600;it++){
+      var gr={};ROSTER.forEach(function(p){gr[p.n]=-LAM*th[p.n]});
+      oyunlar.forEach(function(g){
+        var pw=1/(1+Math.exp(-(ort(g.W)-ort(g.L)))),e=1-pw;
+        g.W.forEach(function(n){if(gr[n]!==undefined)gr[n]+=e/g.W.length});
+        g.L.forEach(function(n){if(gr[n]!==undefined)gr[n]-=e/g.L.length});
+      });
+      ROSTER.forEach(function(p){th[p.n]+=LR*gr[p.n]});
+    }
+
+    // Hafta basina oyun sayisi: tamamlanmis haftalarin medyani
+    var sayilar=haftalar.slice(0,-1).map(function(h){return h.oyun.length}).filter(function(x){return x>0}).sort(function(a,b){return a-b});
+    var N=sayilar.length?sayilar[Math.floor(sayilar.length/2)]:4;
+
+    var hafta=haftalar[haftalar.length-1];
+    if(!hafta||!hafta.oyun.length){
+      box.innerHTML='<div class="wk-note">Bu haftanın takımları henüz belli değil — ilk takım oyunundan sonra hesaplanır.</div>';
+      document.getElementById('wkcnt').textContent='';return;
+    }
+    var son=hafta.oyun[hafta.oyun.length-1];
+    var A=son.W.slice(),B=son.L.slice(),wA=0,wB=0;
+    hafta.oyun.forEach(function(g){ if(overlap(g.W,A)>=overlap(g.W,B))wA++; else wB++; });
+    var kalan=Math.max(0,N-hafta.oyun.length);
+    var p=1/(1+Math.exp(-(ort(A)-ort(B))));
+
+    // kalan oyunlar icin binom
+    function C(n,k){var r=1;for(var i=1;i<=k;i++)r=r*(n-k+i)/i;return r}
+    var PA=0,PB=0,PT=0;
+    for(var k=0;k<=kalan;k++){
+      var pr=C(kalan,k)*Math.pow(p,k)*Math.pow(1-p,kalan-k);
+      var a=wA+k,b=wB+kalan-k;
+      if(a>b)PA+=pr; else if(b>a)PB+=pr; else PT+=pr;
+    }
+
+    function renk(t){var r=0,m=0;t.forEach(function(n){ROSTER.forEach(function(q){if(q.n===n){if(q.t==='kirmizi')r++;else if(q.t==='mavi')m++}})});return r>m?'kirmizi':m>r?'mavi':''}
+    var rA=renk(A),rB=renk(B);
+    if(rA===rB){rA='';rB=''}
+    function ad(r,yedek){return r==='kirmizi'?'Kırmızı':r==='mavi'?'Mavi':yedek}
+    function satir(isim,alt,pct,r){
+      return '<div class="wk-row"><div class="wk-name">'+esc(isim)+'<small>'+esc(alt)+'</small></div>'+
+        '<div class="wk-bar"><i class="'+r+'" style="width:'+(pct*100).toFixed(1)+'%"></i></div>'+
+        '<div class="wk-pct">%'+Math.round(pct*100)+'</div></div>';
+    }
+    var html=satir(ad(rA,'Takım A'),A.length+' kişi · '+wA+' galibiyet',PA,rA)+
+             satir(ad(rB,'Takım B'),B.length+' kişi · '+wB+' galibiyet',PB,rB);
+    if(PT>0.0005)html+=satir('Berabere',(N/2)+'–'+(N/2)+' biterse',PT,'');
+    html+='<div class="wk-note">Tek oyun ihtimali: '+ad(rA,'Takım A')+' %'+Math.round(p*100)+' · '+ad(rB,'Takım B')+' %'+Math.round((1-p)*100)+
+      '. Kalan '+kalan+' takım oyunu (hafta '+N+' oyun). Güç, '+oyunlar.length+' takım oyunundan her yarışmacıya ayrı öğrenilir; takım gücü kadronun ortalamasıdır.</div>';
+    box.innerHTML=html;
+    document.getElementById('wkcnt').textContent='skor '+wA+'–'+wB;
   }
 
   function takimAdlari(kod){
