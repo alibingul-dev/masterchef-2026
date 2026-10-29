@@ -1,112 +1,2619 @@
 {
-  "updated": "29 Ekim 2026",
-  "roster": [
-    { "n": "Batuhan Nazikoğlu", "t": "kirmizi" },
-    { "n": "Nilay Özgen", "t": "mavi" },
-    { "n": "Hasan Alp Karabacak", "t": "kirmizi" },
-    { "n": "Şiringül Kaya", "t": "mavi" },
-    { "n": "Enes Vardar", "t": "kirmizi" },
-    { "n": "Eyüp Can Güneş", "t": "mavi" },
-    { "n": "Demirhan Ali", "t": "mavi" },
-    { "n": "Nurten Tamer Ocak", "t": "kirmizi" },
-    { "n": "Şadi Altınay", "t": "mavi" },
-    { "n": "Burçin Oğuz", "t": "mavi" },
-    { "n": "Tolga Çakuş", "t": "mavi" },
-    { "n": "Muhammed Yahya", "t": "kirmizi" },
-    { "n": "Ayşe Nur İnal", "t": "mavi" },
-    { "n": "Kübra Satılmış", "t": "mavi" },
-    { "n": "Gül", "t": "mavi" },
-    { "n": "Simge Çıtak", "t": "mavi" },
-    { "n": "Bahar Kaya", "t": "mavi" },
-    { "n": "Şükran Boyraz", "t": "kirmizi" },
-    { "n": "Armağan Kırant", "t": "kirmizi" },
-    { "n": "Koray Saygı", "t": "kirmizi" },
-    { "n": "Recep Batur", "t": "kirmizi" },
-    { "n": "Emre Can İrkilmez", "t": "kirmizi" },
-    { "n": "Cansu Şöhret", "t": "mavi" },
-    { "n": "Tolgahan Özden", "t": "kirmizi" },
-    { "n": "Faruk", "t": "kirmizi" },
-    { "n": "Buse Baştan", "t": "kirmizi" }
-  ],
-  "episodes": [
-    { "date": "10 Ağu", "evs": [ { "type": "kaptanlik", "who": ["Burçin Oğuz"] } ] },
-    { "date": "11 Ağu", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Simge Çıtak","Şükran Boyraz","Enes Vardar","Muhammed Yahya","Armağan Kırant","Gül","Koray Saygı","Nurten Tamer Ocak","Şadi Altınay"] }, { "type": "takimL", "who": ["Burçin Oğuz","Batuhan Nazikoğlu","Bahar Kaya","Kübra Satılmış","Tolga Çakuş","Eyüp Can Güneş","Hasan Alp Karabacak","Nilay Özgen","Demirhan Ali","Şiringül Kaya"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Batuhan Nazikoğlu","Demirhan Ali"] } ] },
-    { "date": "12 Ağu", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Simge Çıtak","Şükran Boyraz","Enes Vardar","Muhammed Yahya","Armağan Kırant","Gül","Koray Saygı","Nurten Tamer Ocak","Şadi Altınay"] }, { "type": "takimL", "who": ["Burçin Oğuz","Batuhan Nazikoğlu","Bahar Kaya","Kübra Satılmış","Tolga Çakuş","Eyüp Can Güneş","Hasan Alp Karabacak","Nilay Özgen","Demirhan Ali","Şiringül Kaya"] }, { "type": "bireysel", "who": ["Kübra Satılmış"] }, { "type": "pota", "who": ["Nilay Özgen","Burçin Oğuz"] } ] },
-    { "date": "13 Ağu", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Simge Çıtak","Şükran Boyraz","Enes Vardar","Muhammed Yahya","Armağan Kırant","Gül","Koray Saygı","Nurten Tamer Ocak","Şadi Altınay"] }, { "type": "takimL", "who": ["Burçin Oğuz","Batuhan Nazikoğlu","Bahar Kaya","Kübra Satılmış","Tolga Çakuş","Eyüp Can Güneş","Hasan Alp Karabacak","Nilay Özgen","Demirhan Ali","Şiringül Kaya"] }, { "type": "bireysel", "who": ["Eyüp Can Güneş"] }, { "type": "pota", "who": ["Kübra Satılmış","Tolga Çakuş"] } ] },
-    { "date": "14 Ağu", "evs": [ { "type": "takimW", "who": ["Burçin Oğuz","Batuhan Nazikoğlu","Bahar Kaya","Kübra Satılmış","Tolga Çakuş","Eyüp Can Güneş","Hasan Alp Karabacak","Nilay Özgen","Demirhan Ali","Şiringül Kaya"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Simge Çıtak","Şükran Boyraz","Enes Vardar","Muhammed Yahya","Armağan Kırant","Gül","Koray Saygı","Nurten Tamer Ocak","Şadi Altınay"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Simge Çıtak","Enes Vardar"] } ] },
-    { "date": "15 Ağu", "evs": [] },
-    { "date": "16 Ağu", "evs": [ { "type": "elendi", "who": ["Demirhan Ali"] } ] },
-    { "date": "17 Ağu", "evs": [ { "type": "kaptanlik", "who": ["Muhammed Yahya"] } ] },
-    { "date": "18 Ağu", "evs": [] },
-    { "date": "19 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Nilay Özgen","Şiringül Kaya","Eyüp Can Güneş","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Enes Vardar","Muhammed Yahya","Ayşe Nur İnal","Gül","Simge Çıtak","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur"] }, { "type": "bireysel", "who": ["Armağan Kırant"] }, { "type": "pota", "who": ["Ayşe Nur İnal","Koray Saygı"] } ] },
-    { "date": "20 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Nilay Özgen","Şiringül Kaya","Eyüp Can Güneş","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Enes Vardar","Muhammed Yahya","Ayşe Nur İnal","Gül","Simge Çıtak","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur"] }, { "type": "bireysel", "who": ["Hasan Alp Karabacak"] }, { "type": "pota", "who": ["Gül","Simge Çıtak"] } ] },
-    { "date": "21 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Nilay Özgen","Şiringül Kaya","Eyüp Can Güneş","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Enes Vardar","Muhammed Yahya","Ayşe Nur İnal","Gül","Simge Çıtak","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur"] }, { "type": "bireysel", "who": ["Şükran Boyraz"] }, { "type": "pota", "who": ["Recep Batur","Enes Vardar"] } ] },
-    { "date": "22 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Nilay Özgen","Şiringül Kaya","Eyüp Can Güneş","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Enes Vardar","Muhammed Yahya","Ayşe Nur İnal","Gül","Simge Çıtak","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Şükran Boyraz","Armağan Kırant"] } ] },
-    { "date": "23 Ağu", "evs": [ { "type": "elendi", "who": ["Gül"] } ] },
-    { "date": "24 Ağu", "evs": [ { "type": "kaptanlik", "who": ["Emre Can İrkilmez"] } ] },
-    { "date": "25 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Muhammed Yahya","Bahar Kaya","Armağan Kırant","Koray Saygı"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şadi Altınay","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Simge Çıtak","Şükran Boyraz","Recep Batur","Emre Can İrkilmez"] }, { "type": "bireysel", "who": ["Simge Çıtak"] }, { "type": "pota", "who": ["Şadi Altınay","Nilay Özgen"] } ] },
-    { "date": "26 Ağu", "evs": [] },
-    { "date": "27 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Muhammed Yahya","Bahar Kaya","Armağan Kırant","Koray Saygı"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şadi Altınay","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Simge Çıtak","Şükran Boyraz","Recep Batur","Emre Can İrkilmez"] }, { "type": "bireysel", "who": ["Hasan Alp Karabacak"] }, { "type": "pota", "who": ["Simge Çıtak","Ayşe Nur İnal"] } ] },
-    { "date": "28 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Muhammed Yahya","Bahar Kaya","Armağan Kırant","Koray Saygı"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şadi Altınay","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Simge Çıtak","Şükran Boyraz","Recep Batur","Emre Can İrkilmez"] }, { "type": "bireysel", "who": ["Şükran Boyraz"] }, { "type": "pota", "who": ["Recep Batur","Kübra Satılmış"] } ] },
-    { "date": "29 Ağu", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Muhammed Yahya","Bahar Kaya","Armağan Kırant","Koray Saygı"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şadi Altınay","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Simge Çıtak","Şükran Boyraz","Recep Batur","Emre Can İrkilmez"] }, { "type": "bireysel", "who": ["Emre Can İrkilmez"] }, { "type": "pota", "who": ["Hasan Alp Karabacak","Şükran Boyraz"] } ] },
-    { "date": "30 Ağu", "evs": [ { "type": "elendi", "who": ["Simge Çıtak"] } ] },
-    { "date": "31 Ağu", "evs": [ { "type": "kaptanlik", "who": ["Eyüp Can Güneş"] } ] },
-    { "date": "1 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Şadi Altınay","Muhammed Yahya","Ayşe Nur İnal","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur","Emre Can İrkilmez","Cansu Şöhret"] }, { "type": "bireysel", "who": ["Şükran Boyraz"] }, { "type": "pota", "who": ["Muhammed Yahya","Koray Saygı"] } ] },
-    { "date": "2 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Şadi Altınay","Muhammed Yahya","Ayşe Nur İnal","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur","Emre Can İrkilmez","Cansu Şöhret"] }, { "type": "bireysel", "who": ["Armağan Kırant"] }, { "type": "pota", "who": ["Şükran Boyraz","Emre Can İrkilmez"] } ] },
-    { "date": "3 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Şadi Altınay","Muhammed Yahya","Ayşe Nur İnal","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur","Emre Can İrkilmez","Cansu Şöhret"] }, { "type": "bireysel", "who": ["Ayşe Nur İnal"] }, { "type": "pota", "who": ["Şadi Altınay","Cansu Şöhret"] } ] },
-    { "date": "4 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şadi Altınay","Muhammed Yahya","Ayşe Nur İnal","Şükran Boyraz","Armağan Kırant","Koray Saygı","Recep Batur","Emre Can İrkilmez","Cansu Şöhret"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Şiringül Kaya","Enes Vardar","Eyüp Can Güneş","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya"] }, { "type": "bireysel", "who": ["Hasan Alp Karabacak"] }, { "type": "pota", "who": ["Şiringül Kaya","Nurten Tamer Ocak"] } ] },
-    { "date": "5 Eyl", "evs": [] },
-    { "date": "6 Eyl", "evs": [ { "type": "elendi", "who": ["Koray Saygı"] } ] },
-    { "date": "7 Eyl", "evs": [ { "type": "kaptanlik", "who": ["Tolga Çakuş"] } ] },
-    { "date": "8 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Eyüp Can Güneş","Şadi Altınay","Muhammed Yahya","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Nilay Özgen","Şiringül Kaya","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Cansu Şöhret"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Cansu Şöhret","Nilay Özgen"] } ] },
-    { "date": "9 Eyl", "evs": [ { "type": "odulW", "who": ["Tolgahan Özden"] } ] },
-    { "date": "10 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Şiringül Kaya","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Cansu Şöhret"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Eyüp Can Güneş","Şadi Altınay","Muhammed Yahya","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Tolgahan Özden","Emre Can İrkilmez"] } ] },
-    { "date": "11 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Şiringül Kaya","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Cansu Şöhret"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Eyüp Can Güneş","Şadi Altınay","Muhammed Yahya","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Batuhan Nazikoğlu"] }, { "type": "pota", "who": ["Recep Batur","Şadi Altınay"] } ] },
-    { "date": "12 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Şiringül Kaya","Nurten Tamer Ocak","Burçin Oğuz","Tolga Çakuş","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Cansu Şöhret"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Eyüp Can Güneş","Şadi Altınay","Muhammed Yahya","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Hasan Alp Karabacak"] }, { "type": "pota", "who": ["Batuhan Nazikoğlu","Armağan Kırant"] } ] },
-    { "date": "13 Eyl", "evs": [ { "type": "elendi", "who": ["Cansu Şöhret"] } ] },
-    { "date": "14 Eyl", "evs": [ { "type": "kaptanlik", "who": ["Armağan Kırant"] } ] },
-    { "date": "15 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Eyüp Can Güneş","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Faruk"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Nurten Tamer Ocak","Muhammed Yahya","Ayşe Nur İnal","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Emre Can İrkilmez"] }, { "type": "pota", "who": ["Şiringül Kaya","Tolgahan Özden"] } ] },
-    { "date": "16 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Nurten Tamer Ocak","Muhammed Yahya","Ayşe Nur İnal","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Eyüp Can Güneş","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Faruk"] }, { "type": "bireysel", "who": ["Kübra Satılmış"] }, { "type": "pota", "who": ["Faruk","Şadi Altınay"] } ] },
-    { "date": "17 Eyl", "evs": [ { "type": "odulW", "who": ["Tolga Çakuş"] } ] },
-    { "date": "18 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Nurten Tamer Ocak","Muhammed Yahya","Ayşe Nur İnal","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Eyüp Can Güneş","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Faruk"] }, { "type": "bireysel", "who": ["Burçin Oğuz"] }, { "type": "pota", "who": ["Tolga Çakuş","Kübra Satılmış"] } ] },
-    { "date": "19 Eyl", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Eyüp Can Güneş","Şadi Altınay","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Şükran Boyraz","Faruk"] }, { "type": "takimL", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Enes Vardar","Nurten Tamer Ocak","Muhammed Yahya","Ayşe Nur İnal","Armağan Kırant","Recep Batur","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Enes Vardar"] }, { "type": "pota", "who": ["Nurten Tamer Ocak","Ayşe Nur İnal"] } ] },
-    { "date": "20 Eyl", "evs": [ { "type": "elendi", "who": ["Faruk"] } ] },
-    { "date": "21 Eyl", "evs": [ { "type": "kaptanlik", "who": ["Şükran Boyraz"] } ] },
-    { "date": "22 Eyl", "evs": [ { "type": "takimW", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Şiringül Kaya","Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "bireysel", "who": ["Burçin Oğuz"] }, { "type": "pota", "who": ["Recep Batur","Armağan Kırant"] } ] },
-    { "date": "23 Eyl", "evs": [ { "type": "takimW", "who": ["Batuhan Nazikoğlu","Şiringül Kaya","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "takimL", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Eyüp Can Güneş","Nilay Özgen"] } ] },
-    { "date": "24 Eyl", "evs": [ { "type": "takimW", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Şiringül Kaya","Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "bireysel", "who": ["Şiringül Kaya"] }, { "type": "pota", "who": ["Enes Vardar","Hasan Alp Karabacak"] } ] },
-    { "date": "25 Eyl", "evs": [ { "type": "odulW", "who": ["Nilay Özgen"] } ] },
-    { "date": "26 Eyl", "evs": [ { "type": "takimW", "who": ["Şiringül Kaya","Batuhan Nazikoğlu","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Şadi Altınay","Burçin Oğuz","Kübra Satılmış","Armağan Kırant","Recep Batur"] }, { "type": "takimL", "who": ["Şükran Boyraz","Nilay Özgen","Eyüp Can Güneş","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Bahar Kaya","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Muhammed Yahya","Ayşe Nur İnal"] } ] },
-    { "date": "27 Eyl", "evs": [ { "type": "elendi", "who": ["Recep Batur"] } ] },
-    { "date": "29 Eyl", "evs": [ { "type": "kaptanlik", "who": ["Eyüp Can Güneş"] } ] },
-    { "date": "30 Eyl", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "takimL", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "bireysel", "who": ["Emre Can İrkilmez"] }, { "type": "pota", "who": ["Kübra Satılmış","Ayşe Nur İnal"] } ] },
-    { "date": "1 Eki", "evs": [ { "type": "takimW", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "takimL", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Şiringül Kaya","Buse Baştan"] } ] },
-    { "date": "2 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "takimL", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "bireysel", "who": ["Tolgahan Özden"] }, { "type": "pota", "who": ["Batuhan Nazikoğlu","Nurten Tamer Ocak"] } ] },
-    { "date": "3 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Bahar Kaya","Armağan Kırant","Tolga Çakuş","Burçin Oğuz","Enes Vardar","Hasan Alp Karabacak","Şiringül Kaya","Şadi Altınay","Buse Baştan"] }, { "type": "takimL", "who": ["Nurten Tamer Ocak","Muhammed Yahya","Şükran Boyraz","Batuhan Nazikoğlu","Emre Can İrkilmez","Nilay Özgen","Tolgahan Özden","Ayşe Nur İnal","Kübra Satılmış"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Şükran Boyraz","Tolgahan Özden"] } ] },
-    { "date": "4 Eki", "evs": [ { "type": "elendi", "who": ["Batuhan Nazikoğlu"] } ] },
-    { "date": "5 Eki", "evs": [ { "type": "odulW", "who": ["Tolgahan Özden"] } ] },
-    { "date": "6 Eki", "evs": [ { "type": "kaptanlik", "who": ["Tolga Çakuş"] } ] },
-    { "date": "7 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Şadi Altınay"] }, { "type": "pota", "who": ["Nurten Tamer Ocak","Ayşe Nur İnal"] } ] },
-    { "date": "8 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Nilay Özgen","Buse Baştan"] } ] },
-    { "date": "9 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Kübra Satılmış"] }, { "type": "pota", "who": ["Hasan Alp Karabacak","Şadi Altınay"] } ] },
-    { "date": "10 Eki", "evs": [ { "type": "takimW", "who": ["Tolga Çakuş","Bahar Kaya","Armağan Kırant","Şükran Boyraz","Emre Can İrkilmez","Eyüp Can Güneş","Burçin Oğuz","Tolgahan Özden","Şiringül Kaya"] }, { "type": "takimL", "who": ["Nilay Özgen","Muhammed Yahya","Nurten Tamer Ocak","Enes Vardar","Ayşe Nur İnal","Hasan Alp Karabacak","Şadi Altınay","Kübra Satılmış","Buse Baştan"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Enes Vardar","Kübra Satılmış"] } ] },
-    { "date": "11 Eki", "evs": [ { "type": "elendi", "who": ["Buse Baştan"] } ] },
-    { "date": "12 Eki", "evs": [ { "type": "kaptanlik", "who": ["Muhammed Yahya"] } ] },
-    { "date": "13 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Şadi Altınay"] }, { "type": "pota", "who": ["Şiringül Kaya","Hasan Alp Karabacak"] } ] },
-    { "date": "14 Eki", "evs": [ { "type": "odulW", "who": ["Ayşe Nur İnal"] } ] },
-    { "date": "15 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Tolga Çakuş"] }, { "type": "pota", "who": ["Burçin Oğuz","Nurten Tamer Ocak"] } ] },
-    { "date": "16 Eki", "evs": [ { "type": "takimW", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "takimL", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "bireysel", "who": ["Ayşe Nur İnal"] }, { "type": "pota", "who": ["Tolga Çakuş","Tolgahan Özden"] } ] },
-    { "date": "17 Eki", "evs": [ { "type": "takimW", "who": ["Ayşe Nur İnal","Tolgahan Özden","Emre Can İrkilmez","Burçin Oğuz","Tolga Çakuş","Kübra Satılmış","Bahar Kaya","Nurten Tamer Ocak"] }, { "type": "takimL", "who": ["Muhammed Yahya","Armağan Kırant","Nilay Özgen","Eyüp Can Güneş","Enes Vardar","Şiringül Kaya","Hasan Alp Karabacak","Şadi Altınay","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Şükran Boyraz","Enes Vardar"] } ] },
-    { "date": "18 Eki", "evs": [ { "type": "elendi", "who": ["Şiringül Kaya"] } ] },
-    { "date": "19 Eki", "evs": [ { "type": "kaptanlik", "who": ["Şadi Altınay"] } ] },
-    { "date": "20 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Burçin Oğuz"] }, { "type": "pota", "who": ["Enes Vardar","Emre Can İrkilmez"] } ] },
-    { "date": "21 Eki", "evs": [ { "type": "takimW", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "takimL", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "bireysel", "who": ["Bahar Kaya"] }, { "type": "pota", "who": ["Ayşe Nur İnal","Eyüp Can Güneş"] } ] },
-    { "date": "22 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Enes Vardar"] }, { "type": "pota", "who": ["Nilay Özgen","Burçin Oğuz"] } ] },
-    { "date": "23 Eki", "evs": [] },
-    { "date": "24 Eki", "evs": [ { "type": "takimW", "who": ["Eyüp Can Güneş","Şadi Altınay","Tolga Çakuş","Muhammed Yahya","Ayşe Nur İnal","Kübra Satılmış","Bahar Kaya","Şükran Boyraz"] }, { "type": "takimL", "who": ["Nilay Özgen","Hasan Alp Karabacak","Enes Vardar","Nurten Tamer Ocak","Burçin Oğuz","Armağan Kırant","Emre Can İrkilmez","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Nilay Özgen"] }, { "type": "pota", "who": ["Tolgahan Özden","Hasan Alp Karabacak"] } ] },
-    { "date": "25 Eki", "evs": [ { "type": "elendi", "who": ["Emre Can İrkilmez"] } ] },
-    { "date": "26 Eki", "evs": [ { "type": "kaptanlik", "who": ["Kübra Satılmış"] } ] },
-    { "date": "27 Eki", "evs": [ { "type": "takimW", "who": ["Kübra Satılmış","Burçin Oğuz","Tolga Çakuş","Eyüp Can Güneş","Bahar Kaya","Nilay Özgen","Şadi Altınay","Ayşe Nur İnal"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Muhammed Yahya","Şükran Boyraz","Nurten Tamer Ocak","Enes Vardar","Armağan Kırant","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Muhammed Yahya"] }, { "type": "pota", "who": ["Nurten Tamer Ocak","Enes Vardar"] } ] },
-    { "date": "28 Eki", "evs": [ { "type": "takimW", "who": ["Kübra Satılmış","Burçin Oğuz","Tolga Çakuş","Eyüp Can Güneş","Bahar Kaya","Nilay Özgen","Şadi Altınay","Ayşe Nur İnal"] }, { "type": "takimL", "who": ["Hasan Alp Karabacak","Muhammed Yahya","Şükran Boyraz","Nurten Tamer Ocak","Enes Vardar","Armağan Kırant","Tolgahan Özden"] }, { "type": "bireysel", "who": ["Tolgahan Özden"] }, { "type": "pota", "who": ["Şükran Boyraz","Hasan Alp Karabacak"] } ] }
-  ]
+ "updated": "29 Ekim 2026",
+ "roster": [
+  {
+   "n": "Batuhan Nazikoğlu",
+   "t": "kirmizi",
+   "s": "Deneyimli"
+  },
+  {
+   "n": "Nilay Özgen",
+   "t": "mavi",
+   "s": "Özgüvenli"
+  },
+  {
+   "n": "Hasan Alp Karabacak",
+   "t": "kirmizi",
+   "s": "Usta"
+  },
+  {
+   "n": "Şiringül Kaya",
+   "t": "mavi",
+   "s": "Sanatçı"
+  },
+  {
+   "n": "Enes Vardar",
+   "t": "kirmizi",
+   "s": "Dirençli"
+  },
+  {
+   "n": "Eyüp Can Güneş",
+   "t": "mavi",
+   "s": "Yöresel"
+  },
+  {
+   "n": "Demirhan Ali",
+   "t": "mavi",
+   "s": "Kozmopolit"
+  },
+  {
+   "n": "Nurten Tamer Ocak",
+   "t": "kirmizi",
+   "s": "Sakin"
+  },
+  {
+   "n": "Şadi Altınay",
+   "t": "mavi",
+   "s": "Olgun"
+  },
+  {
+   "n": "Burçin Oğuz",
+   "t": "mavi",
+   "s": "Anaç"
+  },
+  {
+   "n": "Tolga Çakuş",
+   "t": "mavi",
+   "s": "Enerjik"
+  },
+  {
+   "n": "Muhammed Yahya",
+   "t": "kirmizi",
+   "s": "Lider"
+  },
+  {
+   "n": "Ayşe Nur İnal",
+   "t": "mavi",
+   "s": "Mücadeleci"
+  },
+  {
+   "n": "Kübra Satılmış",
+   "t": "mavi",
+   "s": "Gezgin"
+  },
+  {
+   "n": "Gül",
+   "t": "mavi",
+   "s": "Tutkulu"
+  },
+  {
+   "n": "Simge Çıtak",
+   "t": "mavi",
+   "s": "Titiz"
+  },
+  {
+   "n": "Bahar Kaya",
+   "t": "mavi",
+   "s": "İstikrarlı"
+  },
+  {
+   "n": "Şükran Boyraz",
+   "t": "kirmizi",
+   "s": "Çalışkan"
+  },
+  {
+   "n": "Armağan Kırant",
+   "t": "kirmizi",
+   "s": "Yenilikçi"
+  },
+  {
+   "n": "Koray Saygı",
+   "t": "kirmizi",
+   "s": "Kararlı"
+  },
+  {
+   "n": "Recep Batur",
+   "t": "kirmizi",
+   "s": "Cesur"
+  },
+  {
+   "n": "Emre Can İrkilmez",
+   "t": "kirmizi",
+   "s": "Azimli"
+  },
+  {
+   "n": "Cansu Şöhret",
+   "t": "mavi",
+   "s": "Popüler"
+  },
+  {
+   "n": "Tolgahan Özden",
+   "t": "kirmizi",
+   "s": "Genç"
+  },
+  {
+   "n": "Faruk",
+   "t": "kirmizi",
+   "s": "Sevilen"
+  },
+  {
+   "n": "Buse Baştan",
+   "t": "kirmizi",
+   "s": "Karadenizli"
+  }
+ ],
+ "episodes": [
+  {
+   "date": "10 Ağu",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Burçin Oğuz"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "11 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Ayşe Nur İnal",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Gül",
+      "Koray Saygı",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Burçin Oğuz",
+      "Batuhan Nazikoğlu",
+      "Bahar Kaya",
+      "Kübra Satılmış",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Hasan Alp Karabacak",
+      "Nilay Özgen",
+      "Demirhan Ali",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Nilay Özgen"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Demirhan Ali"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "12 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Ayşe Nur İnal",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Gül",
+      "Koray Saygı",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Burçin Oğuz",
+      "Batuhan Nazikoğlu",
+      "Bahar Kaya",
+      "Kübra Satılmış",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Hasan Alp Karabacak",
+      "Nilay Özgen",
+      "Demirhan Ali",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nilay Özgen",
+      "Burçin Oğuz"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "13 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Ayşe Nur İnal",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Gül",
+      "Koray Saygı",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Burçin Oğuz",
+      "Batuhan Nazikoğlu",
+      "Bahar Kaya",
+      "Kübra Satılmış",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Hasan Alp Karabacak",
+      "Nilay Özgen",
+      "Demirhan Ali",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Eyüp Can Güneş"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Kübra Satılmış",
+      "Tolga Çakuş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "14 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Burçin Oğuz",
+      "Batuhan Nazikoğlu",
+      "Bahar Kaya",
+      "Kübra Satılmış",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Hasan Alp Karabacak",
+      "Nilay Özgen",
+      "Demirhan Ali",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Ayşe Nur İnal",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Gül",
+      "Koray Saygı",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Simge Çıtak",
+      "Enes Vardar"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "15 Ağu",
+   "evs": []
+  },
+  {
+   "date": "16 Ağu",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Demirhan Ali"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "17 Ağu",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "18 Ağu",
+   "evs": []
+  },
+  {
+   "date": "19 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Gül",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Armağan Kırant"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Ayşe Nur İnal",
+      "Koray Saygı"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "20 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Gül",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Hasan Alp Karabacak"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Gül",
+      "Simge Çıtak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "21 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Gül",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Recep Batur",
+      "Enes Vardar"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "22 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Gül",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şükran Boyraz",
+      "Armağan Kırant"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "23 Ağu",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Gül"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "24 Ağu",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Emre Can İrkilmez"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "25 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Muhammed Yahya",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Koray Saygı"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Recep Batur",
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Simge Çıtak"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şadi Altınay",
+      "Nilay Özgen"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "26 Ağu",
+   "evs": []
+  },
+  {
+   "date": "27 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Muhammed Yahya",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Koray Saygı"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Recep Batur",
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Hasan Alp Karabacak"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Simge Çıtak",
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "28 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Muhammed Yahya",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Koray Saygı"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Recep Batur",
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Recep Batur",
+      "Kübra Satılmış"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "29 Ağu",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Muhammed Yahya",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Koray Saygı"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Simge Çıtak",
+      "Şükran Boyraz",
+      "Recep Batur",
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Şükran Boyraz"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "30 Ağu",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Simge Çıtak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "31 Ağu",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Eyüp Can Güneş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "1 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Muhammed Yahya",
+      "Koray Saygı"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Armağan Kırant"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şükran Boyraz",
+      "Emre Can İrkilmez"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "3 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Ayşe Nur İnal"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şadi Altınay",
+      "Cansu Şöhret"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "4 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Şükran Boyraz",
+      "Armağan Kırant",
+      "Koray Saygı",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Hasan Alp Karabacak"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şiringül Kaya",
+      "Nurten Tamer Ocak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "5 Eyl",
+   "evs": []
+  },
+  {
+   "date": "6 Eyl",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Koray Saygı"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "7 Eyl",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Tolga Çakuş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "8 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Cansu Şöhret",
+      "Nilay Özgen"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "9 Eyl",
+   "evs": [
+    {
+     "type": "odulW",
+     "who": [
+      "Tolgahan Özden"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "10 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Tolgahan Özden",
+      "Emre Can İrkilmez"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "11 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Batuhan Nazikoğlu"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Recep Batur",
+      "Şadi Altınay"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "12 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Şiringül Kaya",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Cansu Şöhret"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Hasan Alp Karabacak"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Armağan Kırant"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "13 Eyl",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Cansu Şöhret"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "14 Eyl",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Armağan Kırant"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "15 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Faruk"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şiringül Kaya",
+      "Tolgahan Özden"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "16 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Faruk"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Faruk",
+      "Şadi Altınay"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "17 Eyl",
+   "evs": [
+    {
+     "type": "odulW",
+     "who": [
+      "Tolga Çakuş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "18 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Faruk"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Burçin Oğuz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Tolga Çakuş",
+      "Kübra Satılmış"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "19 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz",
+      "Faruk"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Armağan Kırant",
+      "Recep Batur",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Enes Vardar"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "20 Eyl",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Faruk"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "21 Eyl",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Şükran Boyraz"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "22 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Şükran Boyraz",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Bahar Kaya",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Şiringül Kaya",
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Kübra Satılmış",
+      "Armağan Kırant",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Burçin Oğuz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Recep Batur",
+      "Armağan Kırant"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "23 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Kübra Satılmış",
+      "Armağan Kırant",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Şükran Boyraz",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Bahar Kaya",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Eyüp Can Güneş",
+      "Nilay Özgen"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "24 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Şükran Boyraz",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Bahar Kaya",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Şiringül Kaya",
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Kübra Satılmış",
+      "Armağan Kırant",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Enes Vardar",
+      "Hasan Alp Karabacak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "25 Eyl",
+   "evs": [
+    {
+     "type": "odulW",
+     "who": [
+      "Nilay Özgen"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "26 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Şiringül Kaya",
+      "Batuhan Nazikoğlu",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Şadi Altınay",
+      "Burçin Oğuz",
+      "Kübra Satılmış",
+      "Armağan Kırant",
+      "Recep Batur"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Şükran Boyraz",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Bahar Kaya",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Nilay Özgen"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Muhammed Yahya",
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "27 Eyl",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Recep Batur"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "29 Eyl",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Eyüp Can Güneş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "30 Eyl",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Tolga Çakuş",
+      "Burçin Oğuz",
+      "Enes Vardar",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Şadi Altınay",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Batuhan Nazikoğlu",
+      "Emre Can İrkilmez",
+      "Nilay Özgen",
+      "Tolgahan Özden",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Emre Can İrkilmez"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Kübra Satılmış",
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "1 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Batuhan Nazikoğlu",
+      "Emre Can İrkilmez",
+      "Nilay Özgen",
+      "Tolgahan Özden",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Tolga Çakuş",
+      "Burçin Oğuz",
+      "Enes Vardar",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Şadi Altınay",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şiringül Kaya",
+      "Buse Baştan"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Tolga Çakuş",
+      "Burçin Oğuz",
+      "Enes Vardar",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Şadi Altınay",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Batuhan Nazikoğlu",
+      "Emre Can İrkilmez",
+      "Nilay Özgen",
+      "Tolgahan Özden",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Batuhan Nazikoğlu",
+      "Nurten Tamer Ocak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "3 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Tolga Çakuş",
+      "Burçin Oğuz",
+      "Enes Vardar",
+      "Hasan Alp Karabacak",
+      "Şiringül Kaya",
+      "Şadi Altınay",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Batuhan Nazikoğlu",
+      "Emre Can İrkilmez",
+      "Nilay Özgen",
+      "Tolgahan Özden",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Nilay Özgen"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şükran Boyraz",
+      "Tolgahan Özden"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "4 Eki",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Batuhan Nazikoğlu"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "5 Eki",
+   "evs": [
+    {
+     "type": "odulW",
+     "who": [
+      "Tolgahan Özden"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "6 Eki",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Tolga Çakuş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "7 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Tolga Çakuş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Şükran Boyraz",
+      "Emre Can İrkilmez",
+      "Eyüp Can Güneş",
+      "Burçin Oğuz",
+      "Tolgahan Özden",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Muhammed Yahya",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Ayşe Nur İnal",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Kübra Satılmış",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "8 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Tolga Çakuş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Şükran Boyraz",
+      "Emre Can İrkilmez",
+      "Eyüp Can Güneş",
+      "Burçin Oğuz",
+      "Tolgahan Özden",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Muhammed Yahya",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Ayşe Nur İnal",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Kübra Satılmış",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nilay Özgen",
+      "Buse Baştan"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "9 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Tolga Çakuş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Şükran Boyraz",
+      "Emre Can İrkilmez",
+      "Eyüp Can Güneş",
+      "Burçin Oğuz",
+      "Tolgahan Özden",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Muhammed Yahya",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Ayşe Nur İnal",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Kübra Satılmış",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Kübra Satılmış"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Şadi Altınay"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "10 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Tolga Çakuş",
+      "Bahar Kaya",
+      "Armağan Kırant",
+      "Şükran Boyraz",
+      "Emre Can İrkilmez",
+      "Eyüp Can Güneş",
+      "Burçin Oğuz",
+      "Tolgahan Özden",
+      "Şiringül Kaya"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Muhammed Yahya",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Ayşe Nur İnal",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Kübra Satılmış",
+      "Buse Baştan"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Enes Vardar",
+      "Kübra Satılmış"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "11 Eki",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Buse Baştan"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "12 Eki",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "13 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Ayşe Nur İnal",
+      "Tolgahan Özden",
+      "Emre Can İrkilmez",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Nurten Tamer Ocak"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Enes Vardar",
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Şadi Altınay"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "14 Eki",
+   "evs": [
+    {
+     "type": "odulW",
+     "who": [
+      "Ayşe Nur İnal"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "15 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Enes Vardar",
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Ayşe Nur İnal",
+      "Tolgahan Özden",
+      "Emre Can İrkilmez",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Nurten Tamer Ocak"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Tolga Çakuş"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Burçin Oğuz",
+      "Nurten Tamer Ocak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "16 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Enes Vardar",
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Ayşe Nur İnal",
+      "Tolgahan Özden",
+      "Emre Can İrkilmez",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Nurten Tamer Ocak"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Ayşe Nur İnal"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Tolga Çakuş",
+      "Tolgahan Özden"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "17 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Ayşe Nur İnal",
+      "Tolgahan Özden",
+      "Emre Can İrkilmez",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Nurten Tamer Ocak"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Muhammed Yahya",
+      "Armağan Kırant",
+      "Nilay Özgen",
+      "Eyüp Can Güneş",
+      "Enes Vardar",
+      "Şiringül Kaya",
+      "Hasan Alp Karabacak",
+      "Şadi Altınay",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şükran Boyraz",
+      "Enes Vardar"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "18 Eki",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Şiringül Kaya"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "19 Eki",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Şadi Altınay"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "20 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Armağan Kırant",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Burçin Oğuz"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Enes Vardar",
+      "Emre Can İrkilmez"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "21 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Armağan Kırant",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Bahar Kaya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Ayşe Nur İnal",
+      "Eyüp Can Güneş"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "22 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Armağan Kırant",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Enes Vardar"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nilay Özgen",
+      "Burçin Oğuz"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "23 Eki",
+   "evs": []
+  },
+  {
+   "date": "24 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Eyüp Can Güneş",
+      "Şadi Altınay",
+      "Tolga Çakuş",
+      "Muhammed Yahya",
+      "Ayşe Nur İnal",
+      "Kübra Satılmış",
+      "Bahar Kaya",
+      "Şükran Boyraz"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Nilay Özgen",
+      "Hasan Alp Karabacak",
+      "Enes Vardar",
+      "Nurten Tamer Ocak",
+      "Burçin Oğuz",
+      "Armağan Kırant",
+      "Emre Can İrkilmez",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Nilay Özgen"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Tolgahan Özden",
+      "Hasan Alp Karabacak"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "25 Eki",
+   "evs": [
+    {
+     "type": "elendi",
+     "who": [
+      "Emre Can İrkilmez"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "26 Eki",
+   "evs": [
+    {
+     "type": "kaptanlik",
+     "who": [
+      "Kübra Satılmış"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "27 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Kübra Satılmış",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Nilay Özgen",
+      "Şadi Altınay",
+      "Ayşe Nur İnal"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Armağan Kırant",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Muhammed Yahya"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Nurten Tamer Ocak",
+      "Enes Vardar"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "28 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Kübra Satılmış",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Nilay Özgen",
+      "Şadi Altınay",
+      "Ayşe Nur İnal"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Armağan Kırant",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Şükran Boyraz",
+      "Hasan Alp Karabacak"
+     ]
+    }
+   ]
+  }
+ ]
 }
