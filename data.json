@@ -2367,6 +2367,18 @@
      "who": [
       "Enes Vardar",
       "Emre Can İrkilmez"
+     ],
+     "detay": [
+      {
+       "n": "Enes Vardar",
+       "yol": "direkt",
+       "gonderen": "Burçin Oğuz"
+      },
+      {
+       "n": "Emre Can İrkilmez",
+       "yol": "oy",
+       "not": "takım oylamasında en çok oy"
+      }
      ]
     }
    ]
@@ -2411,6 +2423,18 @@
      "who": [
       "Ayşe Nur İnal",
       "Eyüp Can Güneş"
+     ],
+     "detay": [
+      {
+       "n": "Ayşe Nur İnal",
+       "yol": "direkt",
+       "gonderen": "Bahar Kaya"
+      },
+      {
+       "n": "Eyüp Can Güneş",
+       "yol": "oy",
+       "not": "takım oylamasında en çok oy"
+      }
      ]
     }
    ]
@@ -2455,6 +2479,18 @@
      "who": [
       "Nilay Özgen",
       "Burçin Oğuz"
+     ],
+     "detay": [
+      {
+       "n": "Nilay Özgen",
+       "yol": "direkt",
+       "gonderen": "Enes Vardar"
+      },
+      {
+       "n": "Burçin Oğuz",
+       "yol": "oy",
+       "not": "takım oylamasında en çok oy"
+      }
      ]
     }
    ]
@@ -2503,6 +2539,18 @@
      "who": [
       "Tolgahan Özden",
       "Hasan Alp Karabacak"
+     ],
+     "detay": [
+      {
+       "n": "Tolgahan Özden",
+       "yol": "direkt",
+       "gonderen": "Nilay Özgen"
+      },
+      {
+       "n": "Hasan Alp Karabacak",
+       "yol": "oy",
+       "not": "takım oylamasında en çok oy"
+      }
      ]
     }
    ]
@@ -2568,6 +2616,18 @@
      "who": [
       "Nurten Tamer Ocak",
       "Enes Vardar"
+     ],
+     "detay": [
+      {
+       "n": "Nurten Tamer Ocak",
+       "yol": "direkt",
+       "gonderen": "Muhammed Yahya"
+      },
+      {
+       "n": "Enes Vardar",
+       "yol": "oy",
+       "not": "eşit oy · kaptan Hasan Alp seçti"
+      }
      ]
     }
    ]
@@ -2611,9 +2671,50 @@
      "who": [
       "Şükran Boyraz",
       "Hasan Alp Karabacak"
+     ],
+     "detay": [
+      {
+       "n": "Şükran Boyraz",
+       "yol": "direkt",
+       "gonderen": "Tolgahan Özden"
+      },
+      {
+       "n": "Hasan Alp Karabacak",
+       "yol": "oy",
+       "not": "takım oylamasında en çok oy · kaptan"
+      }
      ]
     }
    ]
   }
- ]
+ ],
+ "yorum": {
+  "baslik": "Haftanın yorumu · 29 Eki",
+  "tarih": "29 Eki",
+  "maddeler": [
+   "Mavi 2–0 önde; Kırmızı haftayı artık alamaz, en iyi senaryo kalan iki oyunu kazanıp 2–2 beraberlik.",
+   "Kırmızı haftaya 8'e 7 eksik başladı ve 7 kişiden 4'ü (Nurten, Enes, Şükran, Hasan Alp) şimdiden potada.",
+   "Kaptan Hasan Alp 27 Ekim'de eşit oyu Enes aleyhine bozdu, ertesi gün kendi takımı onu oylamayla potaya yolladı — takım içi güven çatlağı işareti (benim yorumum).",
+   "Modele göre Kırmızı'nın en güçlü iki ismi Nurten ve Armağan; Hasan Alp'in takım oyunu sicili ortalamayı en çok aşağı çeken kalem.",
+   "29 Ekim bayram yayını belirsiz; 23 Ekim'deki gibi kayma olabilir. Düzen sürerse eleme 1 Kasım Pazar."
+  ],
+  "kaynaklar": [
+   {
+    "ad": "Timeturk 27 Eki",
+    "url": "https://www.timeturk.com/masterchef-kim-kazandi-eleme-adayini-kaptan-hasan-belirledi"
+   },
+   {
+    "ad": "Türkiye 28 Eki",
+    "url": "https://www.turkiyegazetesi.com.tr/haberler/masterchef-eleme-adayi-kim-oldu-28-ekim-potaya-giden-isimler-belli-oldu-1825820"
+   },
+   {
+    "ad": "Milli Gazete 26 Eki",
+    "url": "https://www.milligazete.com.tr/26-ekim-masterchef-kaptanlik-oyununu-kim-kazandi-mavi-kaptan-kim-kirmizi-kaptan-kim-takimlar-nasil-olustu"
+   },
+   {
+    "ad": "Habertürk 23 Eki",
+    "url": "https://www.haberturk.com/bilgi/foto/masterchef-bu-aksam-yok-mu-neden-yok-23-ekim-cuma-masterchef-yeni-bolum-ne-zaman-3922123"
+   }
+  ]
+ }
 }

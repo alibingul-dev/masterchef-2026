@@ -399,7 +399,7 @@
         });
         oy.forEach(function(x){
           var tulum=(x.oy&&x.toplam&&x.oy===x.toplam);
-          var s=(x.oy!=null&&x.toplam)?x.oy+'/'+x.toplam+' oy':'oylama ile';
+          var s=(x.oy!=null&&x.toplam)?x.oy+'/'+x.toplam+' oy':(x.not||'oylama ile');
           potaKart+=stat('Oylama ile gönderilen',x.n,s+(tulum?' · tüm oyları aldı':''),'pota',tulum?'<span class="tulum">TULUM ÇIKARDI</span>':'');
         });
       } else {
