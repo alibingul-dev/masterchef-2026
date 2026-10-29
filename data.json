@@ -2715,32 +2715,77 @@
   }
  ],
  "yorum": {
-  "baslik": "Haftanın yorumu · 29 Eki",
+  "baslik": "Haberler ve gözlem",
   "tarih": "29 Eki",
-  "maddeler": [
-   "Mavi 2–0 önde; Kırmızı haftayı artık alamaz, en iyi senaryo kalan iki oyunu kazanıp 2–2 beraberlik.",
-   "Kırmızı haftaya 8'e 7 eksik başladı ve 7 kişiden 4'ü (Nurten, Enes, Şükran, Hasan Alp) şimdiden potada.",
-   "Kaptan Hasan Alp 27 Ekim'de eşit oyu Enes aleyhine bozdu, ertesi gün kendi takımı onu oylamayla potaya yolladı — takım içi güven çatlağı işareti (benim yorumum).",
-   "Modele göre Kırmızı'nın en güçlü iki ismi Nurten ve Armağan; Hasan Alp'in takım oyunu sicili ortalamayı en çok aşağı çeken kalem.",
-   "29 Ekim bayram yayını belirsiz; 23 Ekim'deki gibi kayma olabilir. Düzen sürerse eleme 1 Kasım Pazar."
+  "haberler": [
+   "26 Ekim'de kaptanlığı Kübra aldı, kırmızının kaptanı olarak Hasan Alp'i seçti; takımlar 8'e 7 kuruldu, 15 kişi kaldı.",
+   "Mavi iki takım oyununu da aldı; 28 Ekim oyununu eski yarışmacılardan kurulu misafir jüri belirledi.",
+   "Potada 4 kişi var, dördü de kırmızı: Nurten ve Şükran direkt, Enes (eşit oyda kaptan kararıyla) ve Hasan Alp oylamayla gitti.",
+   "Muhammed ile Tolga arasında 26 Ekim'de sert bir tartışma çıktı; ceza haberi yok.",
+   "Emre elenirken 'Kancalar' yüzünden potaya atıldığını ima etti.",
+   "Oy sayıları haberlerde verilmiyor; sadece 'en çok oy' / 'eşit oy' yazılıyor.",
+   "29 Ekim akşam yayını akışta var ama 23 Ekim'deki gibi tekrar olabilir."
+  ],
+  "gozlem": [
+   "Kancalar dağılıyor: dörtlünün tamamı bu hafta kırmızıda, ikisi potada. Kaptan Hasan Alp eşit oyu kendi grubundan Enes aleyhine bozdu, ertesi gün takım onu potaya yolladı. 17 Ekim'de de Muhammed Enes'i göndermişti.",
+   "Pazar elemesi büyük ihtimalle bir Kanca'yı ya da Nurten/Şükran'ı götürecek; mavi kalan iki oyundan birini kaybetmezse potaya hiç mavi girmez.",
+   "Muhammed grubu taşımıyor, tek başına oynuyor: 9 bireysel galibiyetle lider ve kendisi de 'sonu bireysellik' diyor. Kancalar'ın çözülmesi en çok ona yarar, oylamada hedef olsa da potadan çıkacak güçte.",
+   "Mavi kadrosu modelin en güçlü dört isminden üçünü (Eyüp Can, Bahar, Burçin) barındırıyor; haftanın skoru tesadüf değil, kadro farkı.",
+   "Bahar ve Şadi sessizce yükseliyor; Şadi son üç haftada 5 sıra atladı. Kupa yarışı Muhammed–Bahar ikilisine dönüyor."
   ],
   "kaynaklar": [
+   {
+    "ad": "TGRT 18 Eki",
+    "url": "https://www.tgrthaber.com/magazin/masterchefte-muhammedden-takim-arkadaslarina-tepki-beni-salin-arkadaslar-rahat-bira-3366039"
+   },
+   {
+    "ad": "Haberler Ankara 12 Eki",
+    "url": "https://haberlerankara.com/masterchefte-kancalar-dagildi-hasan-alp-dislandi-enes-armagan-ve-muhammede-tepkiler-cig-gibi"
+   },
+   {
+    "ad": "GZT Emre",
+    "url": "https://www.gzt.com/hayat/mastercheften-elenen-yarismaci-isyan-etti-hakkimi-yediniz-4272806"
+   },
+   {
+    "ad": "GZT Muhammed–Tolga",
+    "url": "https://www.gzt.com/hayat/masterchefte-neler-oldu-muhammed-ve-tolga-neden-kavga-etti-masterchef-tolga-argo-ne-dedi-4273139"
+   },
    {
     "ad": "Timeturk 27 Eki",
     "url": "https://www.timeturk.com/masterchef-kim-kazandi-eleme-adayini-kaptan-hasan-belirledi"
    },
    {
-    "ad": "Türkiye 28 Eki",
-    "url": "https://www.turkiyegazetesi.com.tr/haberler/masterchef-eleme-adayi-kim-oldu-28-ekim-potaya-giden-isimler-belli-oldu-1825820"
+    "ad": "Sonmühür 26 Eki",
+    "url": "https://www.sonmuhur.com/26-ekim-gunu-masterchef-kaptanlik-oyununu-kim-kazandi-ve-takimlar-nasil-olustu"
    },
    {
-    "ad": "Milli Gazete 26 Eki",
-    "url": "https://www.milligazete.com.tr/26-ekim-masterchef-kaptanlik-oyununu-kim-kazandi-mavi-kaptan-kim-kirmizi-kaptan-kim-takimlar-nasil-olustu"
-   },
-   {
-    "ad": "Habertürk 23 Eki",
-    "url": "https://www.haberturk.com/bilgi/foto/masterchef-bu-aksam-yok-mu-neden-yok-23-ekim-cuma-masterchef-yeni-bolum-ne-zaman-3922123"
+    "ad": "TGRT Şadi–Nilay",
+    "url": "https://www.tgrthaber.com/magazin/masterchef-sadi-ve-nilay-arasinda-ilk-ittifak-mi-kuruldu-masterchef-2026da-kartlar-si-3352458"
    }
   ]
- }
+ },
+ "ittifaklar": [
+  {
+   "ad": "Kancalar",
+   "renk": "#6B2FA3",
+   "uyeler": [
+    "Hasan Alp Karabacak",
+    "Enes Vardar",
+    "Armağan Kırant",
+    "Muhammed Yahya"
+   ],
+   "aciklama": "Baştan beri birlikte hareket eden, birbirini potaya yazmadığı söylenen dörtlü; ad 2 Ekim'den beri yarışmacılar arasında kullanılıyor, 12 Ekim'de açık yüzleşme yaşandı. Elenen Batuhan'ın kurucu olduğu, Şadi'nin de üye sayıldığı iddiaları tek kaynaklı.",
+   "teyit": "çekirdek dörtlü çok kaynaklı"
+  },
+  {
+   "ad": "Şadi–Nilay anlaşması",
+   "renk": "#0E8A7B",
+   "uyeler": [
+    "Şadi Altınay",
+    "Nilay Özgen"
+   ],
+   "aciklama": "Nilay daha ilk haftada Şadi ile 'yılın anlaşmasını' yaptığını söyledi; içeriği hiç açıklanmadı.",
+   "teyit": "tek kaynak, spekülatif"
+  }
+ ]
 }
