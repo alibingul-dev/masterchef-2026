@@ -19,7 +19,7 @@ Veri `data.json` dosyasında, render `index.html` içinde.
   ]}],
   "yorum": {"baslik": "...", "tarih": "29 Eki", "haberler": ["..."], "gozlem": ["..."],
             "kaynaklar": [{"ad": "...", "url": "https://..."}]},
-  "ittifaklar": [{"ad": "Kancalar", "renk": "#6B2FA3", "uyeler": ["..."], "aciklama": "...", "teyit": "..."}]
+  "yakinlik": [{"ad": "Kancalar", "tur": "yakin|gergin", "renk": "#6B2FA3", "kisiler": ["..."], "aciklama": "...", "teyit": "..."}]
 }
 ```
 
@@ -29,6 +29,6 @@ Veri `data.json` dosyasında, render `index.html` içinde.
 - `pota.detay` isteğe bağlı. Varsa üstte "Direkt potaya gönderilen" ve "Oylama ile gönderilen" kartları çıkar; `oy == toplam` ise "TULUM ÇIKARDI" yazar. Yoksa tek "Potaya gönderilen" kartı çıkar.
 - `roster[].s` sıfat (ismin yanında etiket), `roster[].sa` sıfatı açıklayan tek cümle.
 - `pota.detay[].yol`: direkt (`gonderen`) veya oy (`oy`/`toplam`, yoksa `not`). Kartlar son elemeden bu yana tüm potayı listeler. Oy sayıları haberlerde verilmiyor; sadece bölüm videosundan alınabilir.
-- `ittifaklar`: üyelerin satırında sol dikey şerit ittifak renginde; potadakilerin satır altında takım rengi–siyah yatay şerit.
+- `yakinlik`: "Kim kime yakın" kartı; yakın grupların satırında sol dikey şerit grup renginde, satırda YAKIN/GERGİN etiketleri; potadakilerin satır altında takım rengi–siyah yatay şerit.
 - `yorum` isteğe bağlı; "Haftayı kazanma ihtimali" kutusunun sağında görünür. Her hafta yenilenir.
 - Takım güçleri, haftayı kazanma ihtimali ve yükselen yıldız sayfada `takimW/takimL/kaptanlik` olaylarından hesaplanır; elle girilmez.

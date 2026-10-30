@@ -53,6 +53,11 @@
   .itt .g b{font-family:var(--disp);font-size:15px;text-transform:uppercase}
   .itt .g i{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink);margin:2px 0}
   .itt .g p{margin:2px 0 0;font-size:12px;color:var(--ink-soft);line-height:1.5}
+  .itt h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 2px}
+  .itt .g.gergin{border-left:6px dashed var(--kirmizi)}
+  .rel{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.06em;padding:2px 6px;margin-right:6px;vertical-align:1px;border:1px solid}
+  .rel.y{color:#fff;border-color:transparent}
+  .rel.g{color:var(--kirmizi);border-color:rgba(183,46,38,.5);background:rgba(183,46,38,.06)}
   .yorum h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 4px}
   .stats{margin-top:8px;display:flex;flex-direction:column;gap:7px}
   .stat{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:9px 13px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
@@ -323,7 +328,7 @@
     {id:'elendi',   lbl:'Elendi',d:0,out:true}
   ];
 
-  var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null, ITT=[], ITT_UYE={};
+  var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null, YAK=[], YAK_UYE={}, GER_UYE={};
 
   function typeOf(id){for(var i=0;i<TYPES.length;i++)if(TYPES[i].id===id)return TYPES[i];return null}
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
@@ -484,8 +489,10 @@
     if(potaN[p.n])line+=' · '+potaN[p.n]+'× POTA';
       if(gone[p.n])line+=' · ELENDİ';
       var potaTag=potada[p.n]?'<span class="tag pota">POTADA</span>':'';
-      var it=ITT_UYE[p.n];
-      var ittTag=it?'<span class="tag" style="background:'+esc(it.renk)+'">'+esc(it.ad.toLocaleUpperCase('tr'))+'</span>':'';
+      var it=YAK_UYE[p.n], ger=GER_UYE[p.n];
+      function ilk(n){return n.split(' ')[0]}
+      var ittTag=(it?'<span class="rel y" style="background:'+esc(it.renk)+'">YAKIN · '+esc(it.kisi.map(ilk).join(', ').toLocaleUpperCase('tr'))+'</span>':'')+
+        (ger?'<span class="rel g">GERGİN · '+esc(ger.map(ilk).join(', ').toLocaleUpperCase('tr'))+'</span>':'');
       return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(it?' itt-u':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'"'+(it?' style="--ic:'+esc(it.renk)+'"':'')+'>'+(potada[p.n]?'<i class="pstripe"></i>':'')+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
         '<div><div class="name">'+esc(p.n)+(p.s?'<span class="sifat">'+esc(p.s)+'</span>':'')+'</div>'+(p.sa?'<div class="sa">'+esc(p.sa)+'</div>':'')+
@@ -630,12 +637,18 @@
       document.getElementById('yorumTarih').textContent=YORUM.tarih||'';
     } else { yb.hidden=true; }
 
-    // Gizli ittifaklar
+    // Kim kime yakin
     var ib=document.getElementById('itt');
-    if(ITT.length){
-      ib.innerHTML='<h3>Gizli ittifaklar</h3>'+ITT.map(function(g){
-        return '<div class="g" style="--ic:'+esc(g.renk)+'"><b>'+esc(g.ad)+'</b><i>'+esc((g.uyeler||[]).join(' · '))+'</i><p>'+esc(g.aciklama||'')+(g.teyit?' ('+esc(g.teyit)+')':'')+'</p></div>';
-      }).join('')+'<div class="src" style="font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:7px">Üyelerin satırında sol dikey şerit ittifak rengindedir.</div>';
+    var yk=YAK.filter(function(g){return g.tur!=='gergin'}), gr=YAK.filter(function(g){return g.tur==='gergin'});
+    function kart(g,cls){
+      return '<div class="g'+(cls?' '+cls:'')+'"'+(g.renk?' style="--ic:'+esc(g.renk)+'"':'')+'><b>'+esc(g.ad||(g.kisiler||[]).join(' – '))+'</b>'+
+        (g.ad?'<i>'+esc((g.kisiler||[]).join(' · '))+'</i>':'')+'<p>'+esc(g.aciklama||'')+(g.teyit?' ('+esc(g.teyit)+')':'')+'</p></div>';
+    }
+    if(YAK.length){
+      ib.innerHTML='<h3>Kim kime yakın</h3>'+
+        (yk.length?'<h4>Yakın</h4>'+yk.map(function(g){return kart(g,'')}).join(''):'')+
+        (gr.length?'<h4>Gergin</h4>'+gr.map(function(g){return kart(g,'gergin')}).join(''):'')+
+        '<div class="src" style="font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);margin-top:7px">Yakın gruptakilerin satırında sol dikey şerit grup rengindedir; satırdaki etiketler kime yakın, kiminle gergin olduğunu gösterir.</div>';
       ib.hidden=false;
     } else { ib.hidden=true; }
   }
@@ -654,9 +667,16 @@
       })};
     });
     YORUM = d.yorum || null;
-    ITT = d.ittifaklar || [];
-    ITT_UYE = {};
-    ITT.forEach(function(g){(g.uyeler||[]).forEach(function(n){ITT_UYE[n]=g})});
+    YAK = d.yakinlik || [];
+    YAK_UYE = {}; GER_UYE = {};
+    YAK.forEach(function(g){
+      var k=g.kisiler||[];
+      k.forEach(function(n){
+        var digerleri=k.filter(function(m){return m!==n});
+        if(g.tur==='gergin'){(GER_UYE[n]=GER_UYE[n]||[]).push.apply(GER_UYE[n],digerleri)}
+        else { if(!YAK_UYE[n])YAK_UYE[n]={renk:g.renk,kisi:[]}; YAK_UYE[n].kisi.push.apply(YAK_UYE[n].kisi,digerleri) }
+      });
+    });
   }
 
   fetch('data.json?v='+Date.now())
