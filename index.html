@@ -36,7 +36,9 @@
   h1 span{color:var(--kirmizi)}
   .lede{font-size:13.5px;color:var(--ink-soft);margin-top:9px;max-width:64ch;line-height:1.55}
 
-  .top{display:grid;grid-template-columns:250px minmax(0,1fr) 300px;gap:16px;align-items:start}
+  .top{display:grid;grid-template-columns:250px minmax(0,1fr) 300px;column-gap:16px;row-gap:0;align-items:start}
+  .top>.aside{grid-column:3;grid-row:1/3}
+  .top>.ranks{grid-column:1/3;grid-row:2;margin-top:10px}
   .side{display:flex;flex-direction:column;gap:9px;margin-top:8px}
   .pl{margin-top:4px}
   .pl div{display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-top:1px solid rgba(14,18,20,.08);padding:4px 0}
@@ -77,6 +79,7 @@
   .sa{font-size:11.5px;color:var(--ink);font-style:italic;margin-top:3px;line-height:1.4}
   @media (max-width:860px){
     .top,.guc{grid-template-columns:1fr}
+    .top>.aside,.top>.ranks{grid-column:auto;grid-row:auto}
   }
   .stat-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
   .stat-v{font-family:var(--disp);font-size:21px;font-weight:600;text-transform:uppercase;line-height:1.15;margin-top:3px;overflow-wrap:anywhere}
@@ -275,15 +278,14 @@
         Doğrulama: her hafta yalnız önceki haftalarla eğitilip o haftanın oyunları tahmin ediliyor (sonuç ihtimal kutusunun altında).
       </div>
     </div>
-    <div>
+    <div class="aside">
       <div class="sechead">Haberler ve gözlem <small id="yorumTarih"></small></div>
       <div class="side">
         <div class="yorum" id="yorum" hidden></div>
         <div class="itt" id="itt" hidden></div>
       </div>
     </div>
-  </div>
-
+    <div class="ranks">
   <div class="sechead" id="h1lbl">Puan alanlar <small id="h1cnt"></small></div>
   <div class="rail" id="rail"></div>
 
@@ -292,6 +294,8 @@
 
   <div class="sechead" id="h3lbl" style="display:none">Elenenler <small id="h3cnt"></small></div>
   <div id="rail3" style="padding-top:8px"></div>
+    </div>
+  </div>
 
   <div class="foot">
     <div>
@@ -426,7 +430,7 @@
         ev.who.forEach(function(n){
           var x=null;det.forEach(function(d){if(d.n===n)x=d});
           if(!x)detaysiz.push({n:n,date:ep.date});
-          else if(x.yol==='direkt')dirL.push({n:n,date:ep.date,s:(x.gonderen?x.gonderen+' gönderdi':'direkt')});
+          else if(x.yol==='direkt')dirL.push({n:n,date:ep.date,s:(x.not?x.not:x.gonderen?x.gonderen+' gönderdi':'direkt')});
           else {
             var tulum=(x.oy&&x.toplam&&x.oy===x.toplam);
             oyL.push({n:n,date:ep.date,s:((x.oy!=null&&x.toplam)?x.oy+'/'+x.toplam+' oy':(x.not||'oylama ile'))+(tulum?' · TULUM ÇIKARDI':''),tulum:tulum});
@@ -521,7 +525,7 @@
     EPISODES.forEach(function(ep){
       var W=null,L=null;
       ep.evs.forEach(function(ev){
-        if(ev.type==='kaptanlik'){cur={oyun:[],kap:ev.who[0]};haftalar.push(cur)}
+        if(ev.type==='kaptanlik'){cur={oyun:[],kap:[ev.who[0]].concat(ev.ikinci?[ev.ikinci]:[])};haftalar.push(cur)}
         if(ev.type==='takimW')W=ev.who; if(ev.type==='takimL')L=ev.who;
       });
       if(W&&L&&W.length&&L.length){
@@ -606,7 +610,7 @@
       var o=Math.round(ort(t)*100);
       return '<table><thead><tr><th colspan="2" class="'+(r||'yok')+'">'+esc(isim)+'<span>ort. '+(o>0?'+':'')+o+'</span></th></tr></thead><tbody>'+
         s.map(function(n){var v=g(n);
-          return '<tr'+(n===hafta.kap?' class="kap"':'')+'><td>'+esc(n)+'</td><td class="v '+(v>0?'pos':v<0?'neg':'')+'">'+(v>0?'+':'')+v+'</td></tr>'}).join('')+
+          return '<tr'+(hafta.kap&&hafta.kap.indexOf(n)>=0?' class="kap"':'')+'><td>'+esc(n)+'</td><td class="v '+(v>0?'pos':v<0?'neg':'')+'">'+(v>0?'+':'')+v+'</td></tr>'}).join('')+
         '</tbody></table>';
     }
     document.getElementById('guc').innerHTML=tablo(ad(rA,'Takım A'),A,rA)+tablo(ad(rB,'Takım B'),B,rB);
@@ -646,7 +650,7 @@
     ROSTER  = d.roster || [];
     EPISODES = (d.episodes||[]).map(function(ep){
       return { date: ep.date, evs: (ep.evs||[]).map(function(ev){
-        return { type: ev.type, who: (typeof ev.who === 'string') ? takimAdlari(ev.who) : (ev.who||[]), detay: ev.detay||null };
+        return { type: ev.type, who: (typeof ev.who === 'string') ? takimAdlari(ev.who) : (ev.who||[]), detay: ev.detay||null, ikinci: ev.ikinci||null };
       })};
     });
     YORUM = d.yorum || null;

@@ -2349,7 +2349,8 @@
      "type": "kaptanlik",
      "who": [
       "Şadi Altınay"
-     ]
+     ],
+     "ikinci": "Enes Vardar"
     }
    ]
   },
@@ -2599,7 +2600,8 @@
      "type": "kaptanlik",
      "who": [
       "Kübra Satılmış"
-     ]
+     ],
+     "ikinci": "Hasan Alp Karabacak"
     }
    ]
   },
@@ -2752,6 +2754,18 @@
      "who": [
       "Muhammed Yahya",
       "Armağan Kırant"
+     ],
+     "detay": [
+      {
+       "n": "Muhammed Yahya",
+       "yol": "direkt",
+       "not": "oylamasız · kırmızıda aday kalmadı"
+      },
+      {
+       "n": "Armağan Kırant",
+       "yol": "direkt",
+       "not": "oylamasız · kırmızıda aday kalmadı"
+      }
      ]
     }
    ]
@@ -2759,22 +2773,22 @@
  ],
  "yorum": {
   "baslik": "Haberler ve gözlem",
-  "tarih": "29 Eki",
+  "tarih": "30 Eki",
   "haberler": [
    "26 Ekim'de kaptanlığı Kübra aldı, kırmızının kaptanı olarak Hasan Alp'i seçti; takımlar 8'e 7 kuruldu, 15 kişi kaldı.",
-   "Mavi iki takım oyununu da aldı; 28 Ekim oyununu eski yarışmacılardan kurulu misafir jüri belirledi.",
-   "Potada 4 kişi var, dördü de kırmızı: Nurten ve Şükran direkt, Enes (eşit oyda kaptan kararıyla) ve Hasan Alp oylamayla gitti.",
+   "Mavi haftanın üç takım oyununu da kazandı (27, 28, 29 Ekim); 29 Ekim'de Cumhuriyet Bayramı temalı gala menüsü yapıldı.",
+   "Tolgahan iki gün üst üste bireysel dokunulmazlık aldı; kırmızının potaya girmeyen tek ismi o.",
+   "29 Ekim'de oylama yapılmadı: kırmızıda başka aday kalmadığı için Muhammed ve Armağan doğrudan potaya girdi.",
+   "Eleme adayları: Nurten, Enes, Şükran, Hasan Alp, Muhammed, Armağan — 6 kişinin 6'sı da kırmızı.",
    "Muhammed ile Tolga arasında 26 Ekim'de sert bir tartışma çıktı; ceza haberi yok.",
-   "Emre elenirken 'Kancalar' yüzünden potaya atıldığını ima etti.",
-   "Oy sayıları haberlerde verilmiyor; sadece 'en çok oy' / 'eşit oy' yazılıyor.",
-   "29 Ekim akşam yayını akışta var ama 23 Ekim'deki gibi tekrar olabilir."
+   "Oy sayıları haberlerde verilmiyor; sadece 'en çok oy' / 'eşit oy' yazılıyor."
   ],
   "gozlem": [
-   "Kancalar dağılıyor: dörtlünün tamamı bu hafta kırmızıda, ikisi potada. Kaptan Hasan Alp eşit oyu kendi grubundan Enes aleyhine bozdu, ertesi gün takım onu potaya yolladı. 17 Ekim'de de Muhammed Enes'i göndermişti.",
-   "Pazar elemesi büyük ihtimalle bir Kanca'yı ya da Nurten/Şükran'ı götürecek; mavi kalan iki oyundan birini kaybetmezse potaya hiç mavi girmez.",
-   "Muhammed grubu taşımıyor, tek başına oynuyor: 9 bireysel galibiyetle lider ve kendisi de 'sonu bireysellik' diyor. Kancalar'ın çözülmesi en çok ona yarar, oylamada hedef olsa da potadan çıkacak güçte.",
-   "Mavi kadrosu modelin en güçlü dört isminden üçünü (Eyüp Can, Bahar, Burçin) barındırıyor; haftanın skoru tesadüf değil, kadro farkı.",
-   "Bahar ve Şadi sessizce yükseliyor; Şadi son üç haftada 5 sıra atladı. Kupa yarışı Muhammed–Bahar ikilisine dönüyor."
+   "Kancalar dörtlüsünün dördü de aynı anda potada: Muhammed, Hasan Alp, Enes, Armağan. Grubun sezondaki en kırılgan anı bu.",
+   "Pazar elemesinde 6 adaydan 4'ü Kanca; olasılık olarak grup büyük ihtimalle bir üye kaybediyor. Muhammed tabak gücüyle en az risk taşıyan.",
+   "Kırmızı 3–0 ezildi; modelde kırmızının en güçlü iki ismi (Nurten, Armağan) bile potada. Bu, kadro dengesizliğinin sonucu: mavi modelin ilk 3'ünü aldı.",
+   "Tolgahan sessiz kazanan: üst üste iki bireysel, Kancalar'ın dışında olup kırmızıda tek güvende kalan.",
+   "Kupa yarışı Muhammed–Bahar ikilisine dönüyor; Şadi son üç haftada 6 sıra atlayarak arkadan geliyor."
   ],
   "kaynaklar": [
    {

@@ -24,6 +24,8 @@ Veri `data.json` dosyasında, render `index.html` içinde.
 ```
 
 - `type`: kaptanlik, bireysel, takimW, takimL, odulW, pota, elendi
+- `kaptanlik` olayında `ikinci`: kazananın seçtiği karşı takım kaptanı (takım güçleri tablosunda (K) olarak iki kaptan da işaretlenir).
+- `pota.detay[].not` varsa kartta gönderen yerine aynen yazılır (ör. "oylamasız · kırmızıda aday kalmadı").
 - `pota.detay` isteğe bağlı. Varsa üstte "Direkt potaya gönderilen" ve "Oylama ile gönderilen" kartları çıkar; `oy == toplam` ise "TULUM ÇIKARDI" yazar. Yoksa tek "Potaya gönderilen" kartı çıkar.
 - `roster[].s` sıfat (ismin yanında etiket), `roster[].sa` sıfatı açıklayan tek cümle.
 - `pota.detay[].yol`: direkt (`gonderen`) veya oy (`oy`/`toplam`, yoksa `not`). Kartlar son elemeden bu yana tüm potayı listeler. Oy sayıları haberlerde verilmiyor; sadece bölüm videosundan alınabilir.
