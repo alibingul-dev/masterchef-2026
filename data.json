@@ -1,5 +1,5 @@
 {
- "updated": "29 Ekim 2026",
+ "updated": "30 Ekim 2026",
  "roster": [
   {
    "n": "Batuhan Nazikoğlu",
@@ -2709,6 +2709,49 @@
        "yol": "oy",
        "not": "takım oylamasında en çok oy · kaptan"
       }
+     ]
+    }
+   ]
+  },
+  {
+   "date": "29 Eki",
+   "evs": [
+    {
+     "type": "takimW",
+     "who": [
+      "Kübra Satılmış",
+      "Burçin Oğuz",
+      "Tolga Çakuş",
+      "Eyüp Can Güneş",
+      "Bahar Kaya",
+      "Nilay Özgen",
+      "Şadi Altınay",
+      "Ayşe Nur İnal"
+     ]
+    },
+    {
+     "type": "takimL",
+     "who": [
+      "Hasan Alp Karabacak",
+      "Muhammed Yahya",
+      "Şükran Boyraz",
+      "Nurten Tamer Ocak",
+      "Enes Vardar",
+      "Armağan Kırant",
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "bireysel",
+     "who": [
+      "Tolgahan Özden"
+     ]
+    },
+    {
+     "type": "pota",
+     "who": [
+      "Muhammed Yahya",
+      "Armağan Kırant"
      ]
     }
    ]
