@@ -491,9 +491,9 @@
       var potaTag=potada[p.n]?'<span class="tag pota">POTADA</span>':'';
       var it=YAK_UYE[p.n], ger=GER_UYE[p.n];
       function ilk(n){return n.split(' ')[0]}
-      var ittTag=(it?'<span class="rel y" style="background:'+esc(it.renk)+'">YAKIN · '+esc(it.kisi.map(ilk).join(', ').toLocaleUpperCase('tr'))+'</span>':'')+
+      var ittTag=(it?it.map(function(y){return '<span class="rel y" style="background:'+esc(y.renk)+'">YAKIN · '+esc(y.kisi.map(ilk).join(', ').toLocaleUpperCase('tr'))+'</span>'}).join(''):'')+
         (ger?'<span class="rel g">GERGİN · '+esc(ger.map(ilk).join(', ').toLocaleUpperCase('tr'))+'</span>':'');
-      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(it?' itt-u':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'"'+(it?' style="--ic:'+esc(it.renk)+'"':'')+'>'+(potada[p.n]?'<i class="pstripe"></i>':'')+
+      return '<div class="row '+p.t+(gone[p.n]?' out':'')+(potada[p.n]?' potada':'')+(it?' itt-u':'')+(quiet&&!gone[p.n]?' quiet':'')+(i===0&&!quiet?' lead':'')+'"'+(it?' style="--ic:'+esc(it[0].renk)+'"':'')+'>'+(potada[p.n]?'<i class="pstripe"></i>':'')+
         '<div class="rank"><div class="rank-n">'+nowR[p.n]+'</div>'+arrow+'</div>'+
         '<div><div class="name">'+esc(p.n)+(p.s?'<span class="sifat">'+esc(p.s)+'</span>':'')+'</div>'+(p.sa?'<div class="sa">'+esc(p.sa)+'</div>':'')+
           '<div class="meta"><span class="tag '+(p.t==='kirmizi'?'kirmizi':p.t==='mavi'?'mavi':'bilinmiyor')+'">'+
@@ -674,7 +674,7 @@
       k.forEach(function(n){
         var digerleri=k.filter(function(m){return m!==n});
         if(g.tur==='gergin'){(GER_UYE[n]=GER_UYE[n]||[]).push.apply(GER_UYE[n],digerleri)}
-        else { if(!YAK_UYE[n])YAK_UYE[n]={renk:g.renk,kisi:[]}; YAK_UYE[n].kisi.push.apply(YAK_UYE[n].kisi,digerleri) }
+        else { (YAK_UYE[n]=YAK_UYE[n]||[]).push({renk:g.renk,kisi:digerleri}) }
       });
     });
   }
