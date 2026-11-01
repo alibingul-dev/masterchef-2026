@@ -167,6 +167,25 @@
   .method{font-size:11.5px;color:var(--ink-soft);line-height:1.65}
   .stamp{margin-top:22px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
     text-transform:uppercase;color:var(--ink-soft);text-align:center}
+
+  .tahmin{background:var(--pass);border:1px solid rgba(14,18,20,.14);border-left:5px solid var(--kirmizi);padding:10px 13px;margin-top:7px}
+  .tahmin .th-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+  .th-sonuc{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;padding:2px 6px;color:#fff;background:var(--gain)}
+  .th-sonuc.no{background:var(--kirmizi)}
+  .th-row{border-top:1px solid rgba(14,18,20,.08);padding:6px 0 6px 8px;border-left:4px solid var(--rail);margin-top:6px}
+  .th-row.kirmizi{border-left-color:var(--kirmizi)} .th-row.mavi{border-left-color:var(--mavi)}
+  .th-row.out{background:rgba(14,18,20,.05)}
+  .th-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .th-top b{font-family:var(--disp);font-size:15px;font-weight:600;text-transform:uppercase;line-height:1.15;min-width:0;overflow-wrap:anywhere}
+  .th-el{display:inline-block;background:var(--ink);color:var(--pass);font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.12em;padding:2px 5px;margin-left:6px;vertical-align:2px}
+  .th-p{flex:none;font-family:var(--mono);font-size:11px;font-weight:600;color:#fff;padding:2px 6px;background:var(--rail)}
+  .th-bar{height:4px;background:rgba(14,18,20,.10);margin-top:5px}
+  .th-bar i{display:block;height:100%;background:var(--rail)}
+  .th-row.r-yuksek .th-p,.th-row.r-yuksek .th-bar i{background:var(--kirmizi)}
+  .th-row.r-orta .th-p,.th-row.r-orta .th-bar i{background:var(--flame)}
+  .th-row.r-dusuk .th-p,.th-row.r-dusuk .th-bar i{background:var(--gain)}
+  .th-row p{margin:4px 0 0;font-size:11.5px;color:var(--ink-soft);line-height:1.45}
+  .th-not{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);opacity:.85;margin-top:8px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -267,6 +286,7 @@
     <div>
       <div class="sechead">Son bölüm <small id="sonEp"></small></div>
       <div class="stats" id="stats"></div>
+      <div class="tahmin" id="tahmin" hidden></div>
     </div>
     <div>
       <div class="sechead" id="wklbl">Haftayı kazanma ihtimali <small id="wkcnt"></small></div>
@@ -329,6 +349,7 @@
   ];
 
   var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null, YAK=[], YAK_UYE={}, GER_UYE={};
+  var TAHMIN=null;
 
   function typeOf(id){for(var i=0;i<TYPES.length;i++)if(TYPES[i].id===id)return TYPES[i];return null}
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
@@ -475,6 +496,7 @@
     document.getElementById('sonEp').textContent=(EPISODES.length?EPISODES[EPISODES.length-1].date:'—')+' · '+EPISODES.length+' bölüm';
 
     haftaOlasilik();
+    tahminCiz();
 
     function rowHtml(p,i,quiet){
       var s=cur[p.n];
@@ -653,6 +675,35 @@
     } else { ib.hidden=true; }
   }
 
+  // ===== Eleme tahmini (data.json → tahmin) =====
+  function tahminCiz(){
+    var box=document.getElementById('tahmin');
+    if(!TAHMIN||!TAHMIN.adaylar||!TAHMIN.adaylar.length){box.hidden=true;box.innerHTML='';return}
+    var L=TAHMIN.adaylar.slice().sort(function(a,b){return (b.p||0)-(a.p||0)});
+    var elenen=null;
+    EPISODES.forEach(function(ep){
+      if(ep.date!==TAHMIN.eleme)return;
+      ep.evs.forEach(function(ev){if(ev.type==='elendi'&&ev.who.length&&!elenen)elenen=ev.who[0]});
+    });
+    var sonuc='';
+    if(elenen){
+      var tuttu=L.slice(0,2).some(function(a){return a.n===elenen});
+      sonuc='<span class="th-sonuc'+(tuttu?'':' no')+'">'+(tuttu?'TUTTU':'TUTMADI')+'</span>';
+    }
+    function takim(n){for(var i=0;i<ROSTER.length;i++)if(ROSTER[i].n===n)return ROSTER[i].t;return ''}
+    function risk(p){return p>=22?'r-yuksek':p>=16?'r-orta':p>=8?'r-notr':'r-dusuk'}
+    box.innerHTML='<div class="th-k"><span>Eleme tahmini · '+esc(TAHMIN.eleme||'')+'</span>'+sonuc+'</div>'+
+      L.map(function(a){
+        var p=Math.max(0,Math.min(100,+a.p||0)), t=takim(a.n), out=(elenen&&a.n===elenen);
+        return '<div class="th-row '+risk(p)+(t?' '+t:'')+(out?' out':'')+'">'+
+          '<div class="th-top"><b>'+esc(a.n)+(out?'<span class="th-el">ELENDİ</span>':'')+'</b><span class="th-p">%'+p+'</span></div>'+
+          '<div class="th-bar"><i style="width:'+p+'%"></i></div>'+
+          (a.neden?'<p>'+esc(a.neden)+'</p>':'')+'</div>';
+      }).join('')+
+      (TAHMIN.not?'<div class="th-not">'+esc(TAHMIN.not)+'</div>':'');
+    box.hidden=false;
+  }
+
   function takimAdlari(kod){
     var t = kod==='@kirmizi' ? 'kirmizi' : 'mavi';
     return ROSTER.filter(function(p){return p.t===t}).map(function(p){return p.n});
@@ -668,6 +719,7 @@
     });
     YORUM = d.yorum || null;
     YAK = d.yakinlik || [];
+    TAHMIN = d.tahmin || null;
     YAK_UYE = {}; GER_UYE = {};
     YAK.forEach(function(g){
       var k=g.kisiler||[];

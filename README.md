@@ -19,7 +19,9 @@ Veri `data.json` dosyasında, render `index.html` içinde.
   ]}],
   "yorum": {"baslik": "...", "tarih": "29 Eki", "haberler": ["..."], "gozlem": ["..."],
             "kaynaklar": [{"ad": "...", "url": "https://..."}]},
-  "yakinlik": [{"ad": "Kancalar", "tur": "yakin|gergin", "renk": "#6B2FA3", "kisiler": ["..."], "aciklama": "...", "teyit": "..."}]
+  "yakinlik": [{"ad": "Kancalar", "tur": "yakin|gergin", "renk": "#6B2FA3", "kisiler": ["..."], "aciklama": "...", "teyit": "..."}],
+  "tahmin": {"eleme": "1 Kas", "tarih": "1 Kasım 2026",
+             "adaylar": [{"n": "Ad Soyad", "p": 25, "neden": "..."}], "not": "..."}
 }
 ```
 
@@ -31,4 +33,6 @@ Veri `data.json` dosyasında, render `index.html` içinde.
 - `pota.detay[].yol`: direkt (`gonderen`) veya oy (`oy`/`toplam`, yoksa `not`). Kartlar son elemeden bu yana tüm potayı listeler. Oy sayıları haberlerde verilmiyor; sadece bölüm videosundan alınabilir.
 - `yakinlik`: "Kim kime yakın" kartı; yakın grupların satırında sol dikey şerit grup renginde, satırda YAKIN/GERGİN etiketleri; potadakilerin satır altında takım rengi–siyah yatay şerit.
 - `yorum` isteğe bağlı; "Haftayı kazanma ihtimali" kutusunun sağında görünür. Her hafta yenilenir.
+- `tahmin` isteğe bağlı; "Son bölüm" kutularının altında "Eleme tahmini · `eleme`" kartı çıkar. `adaylar[].n` roster'daki tam ad, `p` yüzde (≥22 kırmızı, 16–21 amber, 8–15 gri, <8 yeşil), `neden` satır altı açıklama; `not` kartın altında soluk yazılır.
+  `episodes` içinde `date == tahmin.eleme` olan bir `elendi` olayı varsa elenen satırda "ELENDİ" çıkar; elenen en yüksek 2 adaydan biriyse başlıkta "TUTTU", değilse "TUTMADI" yazar. Yeni eleme için alan elle yenilenir.
 - Takım güçleri, haftayı kazanma ihtimali ve yükselen yıldız sayfada `takimW/takimL/kaptanlik` olaylarından hesaplanır; elle girilmez.
