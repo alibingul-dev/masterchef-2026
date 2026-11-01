@@ -37,8 +37,8 @@
   .lede{font-size:13.5px;color:var(--ink-soft);margin-top:9px;max-width:64ch;line-height:1.55}
 
   .top{display:grid;grid-template-columns:250px minmax(0,1fr) 300px;column-gap:16px;row-gap:0;align-items:start}
-  .top>.aside{grid-column:3;grid-row:1/3}
-  .top>.ranks{grid-column:1/3;grid-row:2;margin-top:10px}
+  .top>.aside{grid-column:3;grid-row:1/4}
+  .top>.ranks{grid-column:1/3;grid-row:3;margin-top:10px}
   .side{display:flex;flex-direction:column;gap:9px;margin-top:8px}
   .pl{margin-top:4px}
   .pl div{display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-top:1px solid rgba(14,18,20,.08);padding:4px 0}
@@ -168,11 +168,12 @@
   .stamp{margin-top:22px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
     text-transform:uppercase;color:var(--ink-soft);text-align:center}
 
-  .tahmin{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:10px 13px;margin-top:8px}
+  .tahmin{background:var(--pass);border:1px solid rgba(14,18,20,.14);padding:10px 13px;margin-top:14px}
+  .top>.tahmin{grid-column:1/3;grid-row:2}
   .tahmin .th-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
   .th-sonuc{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;padding:2px 6px;color:#fff;background:var(--gain)}
   .th-sonuc.no{background:var(--kirmizi)}
-  .th-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-top:8px}
+  .th-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px;margin-top:8px}
   .th-row{border:1px solid rgba(14,18,20,.12);padding:7px 8px 7px;min-width:0}
   .th-row.out{background:rgba(14,18,20,.05)}
   .th-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
@@ -185,7 +186,7 @@
   .th-row.r-orta .th-p,.th-row.r-orta .th-bar i{background:var(--flame)}
   .th-row.r-dusuk .th-p,.th-row.r-dusuk .th-bar i{background:var(--gain)}
   .th-row p{margin:5px 0 0;font-size:11px;color:var(--ink-soft);line-height:1.4}
-  @media (max-width:860px){.top>div:nth-child(2){display:flex;flex-direction:column}.top>div:nth-child(2)>.tahmin{order:-1}.th-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:860px){.top>.tahmin{grid-column:auto;grid-row:auto}.th-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:420px){.th-grid{grid-template-columns:minmax(0,1fr)}}
   .th-not{font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);opacity:.85;margin-top:8px;line-height:1.5}
 </style>
@@ -289,6 +290,7 @@
       <div class="sechead">Son bölüm <small id="sonEp"></small></div>
       <div class="stats" id="stats"></div>
     </div>
+    <div class="tahmin" id="tahmin" hidden></div>
     <div>
       <div class="sechead" id="wklbl">Haftayı kazanma ihtimali <small id="wkcnt"></small></div>
       <div class="week" id="week"></div>
@@ -303,7 +305,6 @@
         Bireysel puanlar bu hesaba girmez; yalnız takım oyunu sonuçları kullanılır.
         Doğrulama: her hafta yalnız önceki haftalarla eğitilip o haftanın oyunları tahmin ediliyor (sonuç ihtimal kutusunun altında).
       </div>
-      <div class="tahmin" id="tahmin" hidden></div>
     </div>
     <div class="aside">
       <div class="sechead">Haberler ve gözlem <small id="yorumTarih"></small></div>
