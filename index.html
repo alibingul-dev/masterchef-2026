@@ -604,11 +604,15 @@
     var N=sayilar.length?sayilar[Math.floor(sayilar.length/2)]:4;
 
     var hafta=haftalar[haftalar.length-1];
-    if(!hafta||!hafta.oyun.length){
+    // Henuz takim oyunu yoksa kadroyu ROSTER renklerinden kur (elenenler haric)
+    var gone0={},A0=[],B0=[];
+    EPISODES.forEach(function(ep){ep.evs.forEach(function(ev){if(ev.type==='elendi')ev.who.forEach(function(n){gone0[n]=1})})});
+    ROSTER.forEach(function(q){if(gone0[q.n])return;if(q.t==='mavi')A0.push(q.n);else if(q.t==='kirmizi')B0.push(q.n)});
+    if(!hafta||(!hafta.oyun.length&&!(A0.length&&B0.length))){
       box.innerHTML='<div class="wk-note">Bu haftanın takımları henüz belli değil — ilk takım oyunundan sonra hesaplanır.</div>';
       document.getElementById('wkcnt').textContent='';return;
     }
-    var son=hafta.oyun[hafta.oyun.length-1];
+    var son=hafta.oyun.length?hafta.oyun[hafta.oyun.length-1]:{W:A0,L:B0};
     var A=son.W.slice(),B=son.L.slice(),wA=0,wB=0;
     hafta.oyun.forEach(function(g){ if(overlap(g.W,A)>=overlap(g.W,B))wA++; else wB++; });
     var kalan=Math.max(0,N-hafta.oyun.length);
