@@ -673,10 +673,12 @@
 
     // Kim kime yakin
     var ib=document.getElementById('itt');
-    var yk=YAK.filter(function(g){return g.tur!=='gergin'}), gr=YAK.filter(function(g){return g.tur==='gergin'});
+    var GONE={};EPISODES.forEach(function(ep){ep.evs.forEach(function(ev){if(ev.type==='elendi')ev.who.forEach(function(n){GONE[n]=1})})});
+    var AKT=YAK.map(function(g){var k=(g.kisiler||[]).filter(function(n){return !GONE[n]});return Object.assign({},g,{kisiler:k,cikan:(g.kisiler||[]).filter(function(n){return GONE[n]})})}).filter(function(g){return g.kisiler.length>=2});
+    var yk=AKT.filter(function(g){return g.tur!=='gergin'}), gr=AKT.filter(function(g){return g.tur==='gergin'});
     function kart(g,cls){
       return '<div class="g'+(cls?' '+cls:'')+'"'+(g.renk?' style="--ic:'+esc(g.renk)+'"':'')+'><b>'+esc(g.ad||(g.kisiler||[]).join(' – '))+'</b>'+
-        (g.ad?'<i>'+esc((g.kisiler||[]).join(' · '))+'</i>':'')+'<p>'+esc(g.aciklama||'')+(g.teyit?' ('+esc(g.teyit)+')':'')+'</p></div>';
+        (g.ad?'<i>'+esc((g.kisiler||[]).join(' · '))+(g.cikan&&g.cikan.length?' (elenen: '+esc(g.cikan.join(', '))+')':'')+'</i>':'')+'<p>'+esc(g.aciklama||'')+(g.teyit?' ('+esc(g.teyit)+')':'')+'</p></div>';
     }
     if(YAK.length){
       ib.innerHTML='<h3>Kim kime yakın</h3>'+
@@ -732,8 +734,9 @@
     YAK = d.yakinlik || [];
     TAHMIN = d.tahmin || null;
     YAK_UYE = {}; GER_UYE = {};
+    var GONE0={};(d.episodes||[]).forEach(function(ep){(ep.evs||[]).forEach(function(ev){if(ev.type==='elendi'&&Array.isArray(ev.who))ev.who.forEach(function(n){GONE0[n]=1})})});
     YAK.forEach(function(g){
-      var k=g.kisiler||[];
+      var k=(g.kisiler||[]).filter(function(n){return !GONE0[n]}); if(k.length<2)return;
       k.forEach(function(n){
         var digerleri=k.filter(function(m){return m!==n});
         if(g.tur==='gergin'){(GER_UYE[n]=GER_UYE[n]||[]).push.apply(GER_UYE[n],digerleri)}
