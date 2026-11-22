@@ -697,13 +697,16 @@
       sd=Math.sqrt(v.reduce(function(a,b){return a+(b-m)*(b-m)},0)/v.length)||1;return v.map(function(x){return (x-m)/sd})}
     var zP=z(function(n){return C.cur[n]||0}), zS=z(function(n){return C.solo[n]||0}),
         zG=z(function(n){return GUC[n]||0}), zK=z(function(n){return C.potaN[n]||0});
-    var sc=ad.map(function(n,i){return -0.6*zP[i]-0.6*zS[i]-0.5*zG[i]+0.4*zK[i]});
+    // Ekran degeri (reyting): 'Kim kime yakin' kartindaki iliski sayisi; gergin iliski 2 kat sayilir.
+    function ekran(n){var k=0;YAK.forEach(function(g){if((g.kisiler||[]).indexOf(n)>=0)k+=(g.tur==='gergin'?2:1)});return k}
+    var zE=z(ekran);
+    var sc=ad.map(function(n,i){return -0.6*zP[i]-0.6*zS[i]-0.5*zG[i]+0.4*zK[i]-0.8*zE[i]});
     var ex=sc.map(function(x){return Math.exp(0.6*x)}), t=ex.reduce(function(a,b){return a+b},0);
     var gun=EPISODES.length?EPISODES[EPISODES.length-1].date:'';
     return {eleme:'bu hafta',oto:true,adaylar:ad.map(function(n,i){
       var g=Math.round((GUC[n]||0)*100);
-      return {n:n,p:Math.round(ex[i]/t*100),neden:(C.potaN[n]||0)+'. potası · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
-    }),not:'Otomatik tahmin ('+gun+' verisiyle): düşük puan, az bireysel galibiyet, düşük takım gücü ve çok pota riski artırır. Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
+      return {n:n,p:Math.round(ex[i]/t*100),neden:(C.potaN[n]||0)+'. potası · ekran değeri '+ekran(n)+' · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
+    }),not:'Otomatik tahmin ('+gun+' verisiyle): düşük puan, az bireysel galibiyet, düşük takım gücü ve çok pota riski artırır; ekran değeri (kavga ve yakınlık sayısı, gergin ilişki 2 kat) riski düşürür. Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
   }
   function tahminCiz(C){
     var box=document.getElementById('tahmin');
