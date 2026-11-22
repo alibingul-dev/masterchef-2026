@@ -700,16 +700,17 @@
     // Ekran degeri (reyting): data.json → reyting.skor (0–10, haber gündemi + sosyal medya). Ana etken.
     function ekran(n){return (REYT&&REYT.skor&&REYT.skor[n]!=null)?+REYT.skor[n]:0}
     var zE=z(ekran);
-    // Uç koruması (Ali, 22 Kas): potanın en iyisi ve en kötüsü gitmez — puanı ortalamadan uzak olan korunur, risk ortada toplanır.
-    var sc=ad.map(function(n,i){return -1.3*Math.abs(zP[i])-0.9*zE[i]-0.3*zS[i]-0.2*zG[i]+0.2*zK[i]});
+    // Lider koruması: sezonun 14 elemesinde potanın puan lideri hiç gitmedi (14/14); en düşük puanlı ise 4/14 kez gitti,
+    // yani en kötü korunmuyor. Lider güçlü korunur; geri kalanda düşük puan riski artırır; ekran değeri korur.
     var srt=ad.slice().sort(function(a,b){return (C.cur[b]||0)-(C.cur[a]||0)}), uc={};
-    uc[srt[0]]='potanın en iyisi'; uc[srt[srt.length-1]]='potanın en kötüsü';
+    uc[srt[0]]='potanın puan lideri'; uc[srt[srt.length-1]]='potanın en düşük puanlısı';
+    var sc=ad.map(function(n,i){return (n===srt[0]?-3:0)-0.5*zP[i]-0.9*zE[i]-0.3*zS[i]-0.2*zG[i]+0.2*zK[i]});
     var ex=sc.map(function(x){return Math.exp(0.6*x)}), t=ex.reduce(function(a,b){return a+b},0);
     var gun=EPISODES.length?EPISODES[EPISODES.length-1].date:'';
     return {eleme:'bu hafta',oto:true,adaylar:ad.map(function(n,i){
       var g=Math.round((GUC[n]||0)*100);
-      return {n:n,p:Math.round(ex[i]/t*100),neden:(uc[n]?uc[n]+' (korunur) · ':'ortada kalan · ')+'ekran değeri '+ekran(n)+'/10 · '+(C.potaN[n]||0)+'. potası · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
-    }),not:'Otomatik tahmin ('+gun+' verisiyle): ana kural potanın en iyisi ve en kötüsü gitmez (puanı potanın ortalamasından en uzak olanlar korunur), ikinci etken ekran değeri (haber gündemi); bireysel galibiyet, takım gücü ve pota sayısı küçük etken.'+(REYT&&REYT.tarih?' Ekran değeri: '+REYT.tarih+'.':'')+' Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
+      return {n:n,p:Math.round(ex[i]/t*100),neden:(n===srt[0]?uc[n]+' (korunur) · ':uc[n]?uc[n]+' · ':'')+'ekran değeri '+ekran(n)+'/10 · '+(C.potaN[n]||0)+'. potası · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
+    }),not:'Otomatik tahmin ('+gun+' verisiyle): ana kural potanın puan lideri gitmez (sezonda 14 elemenin 14'ünde tuttu); en düşük puanlı korunmaz (14'te 4 kez gitti); ekran değeri (haber gündemi) korur; bireysel galibiyet, takım gücü ve pota sayısı küçük etken.'+(REYT&&REYT.tarih?' Ekran değeri: '+REYT.tarih+'.':'')+' Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
   }
   function tahminCiz(C){
     var box=document.getElementById('tahmin');
