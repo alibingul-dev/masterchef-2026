@@ -704,13 +704,13 @@
     // yani en kötü korunmuyor. Lider güçlü korunur; geri kalanda düşük puan riski artırır; ekran değeri korur.
     var srt=ad.slice().sort(function(a,b){return (C.cur[b]||0)-(C.cur[a]||0)}), uc={};
     uc[srt[0]]='potanın puan lideri'; uc[srt[srt.length-1]]='potanın en düşük puanlısı';
-    var sc=ad.map(function(n,i){return (n===srt[0]?-3:0)-0.5*zP[i]-0.9*zE[i]-0.3*zS[i]-0.2*zG[i]+0.2*zK[i]});
+    var sc=ad.map(function(n,i){return (n===srt[0]?-3:0)-0.5*zP[i]-0.4*zE[i]-0.3*zS[i]-0.2*zG[i]+0.2*zK[i]});
     var ex=sc.map(function(x){return Math.exp(0.6*x)}), t=ex.reduce(function(a,b){return a+b},0);
     var gun=EPISODES.length?EPISODES[EPISODES.length-1].date:'';
     return {eleme:'bu hafta',oto:true,adaylar:ad.map(function(n,i){
       var g=Math.round((GUC[n]||0)*100);
       return {n:n,p:Math.round(ex[i]/t*100),neden:(n===srt[0]?uc[n]+' (korunur) · ':uc[n]?uc[n]+' · ':'')+'ekran değeri '+ekran(n)+'/10 · '+(C.potaN[n]||0)+'. potası · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
-    }),not:'Otomatik tahmin ('+gun+' verisiyle): ana kural potanın puan lideri gitmez (sezonda 14 elemenin 14’ünde tuttu); en düşük puanlı korunmaz (14’te 4 kez gitti); ekran değeri (haber gündemi) korur; bireysel galibiyet, takım gücü ve pota sayısı küçük etken.'+(REYT&&REYT.tarih?' Ekran değeri: '+REYT.tarih+'.':'')+' Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
+    }),not:'Otomatik tahmin ('+gun+' verisiyle): ana kural potanın puan lideri gitmez (sezonda 14 elemenin 14’ünde tuttu); en düşük puanlı korunmaz (14’te 4 kez gitti); ekran değeri (haber gündemi) küçük etken: son 7 elemede 1 hafta tuttu (Kübra), 1 hafta ters çıktı (Şiringül), 5 hafta veri yok; bireysel galibiyet, takım gücü ve pota sayısı da küçük etken. Geriye dönük test: elenen 7 haftanın 2’sinde ilk iki tahmindeydi.'+(REYT&&REYT.tarih?' Ekran değeri: '+REYT.tarih+'.':'')+' Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
   }
   function tahminCiz(C){
     var box=document.getElementById('tahmin');
