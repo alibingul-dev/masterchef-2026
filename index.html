@@ -357,7 +357,7 @@
   ];
 
   var UPDATED='', ROSTER=[], EPISODES=[], YORUM=null, YAK=[], YAK_UYE={}, GER_UYE={};
-  var TAHMIN=null;
+  var TAHMIN=null, GUC={};
 
   function typeOf(id){for(var i=0;i<TYPES.length;i++)if(TYPES[i].id===id)return TYPES[i];return null}
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
@@ -504,7 +504,7 @@
     document.getElementById('sonEp').textContent=(EPISODES.length?EPISODES[EPISODES.length-1].date:'—')+' · '+EPISODES.length+' bölüm';
 
     haftaOlasilik();
-    tahminCiz();
+    tahminCiz({potada:potada,cur:cur,solo:solo,potaN:potaN,odulN:odulN});
 
     function rowHtml(p,i,quiet){
       var s=cur[p.n];
@@ -588,7 +588,7 @@
       }
       return T;
     }
-    var th=fit(oyunlar);
+    var th=fit(oyunlar); GUC=th;
     function ort(t){return ortT(th,t)}
     // Geriye donuk test: her hafta, yalnizca onceki haftalarla egitilip tahmin edilir
     var btN=0,btHit=0;
@@ -690,13 +690,34 @@
   }
 
   // ===== Eleme tahmini (data.json → tahmin) =====
-  function tahminCiz(){
+  // Tahmin bu haftanin potasina ait degilse (pota degistiyse) eski tahmini gosterme; veriden otomatik tahmin kur.
+  function otoTahmin(C){
+    var ad=Object.keys(C.potada); if(ad.length<2)return null;
+    function z(f){var v=ad.map(f),m=v.reduce(function(a,b){return a+b},0)/v.length,
+      sd=Math.sqrt(v.reduce(function(a,b){return a+(b-m)*(b-m)},0)/v.length)||1;return v.map(function(x){return (x-m)/sd})}
+    var zP=z(function(n){return C.cur[n]||0}), zS=z(function(n){return C.solo[n]||0}),
+        zG=z(function(n){return GUC[n]||0}), zK=z(function(n){return C.potaN[n]||0});
+    var sc=ad.map(function(n,i){return -0.6*zP[i]-0.6*zS[i]-0.5*zG[i]+0.4*zK[i]});
+    var ex=sc.map(function(x){return Math.exp(0.6*x)}), t=ex.reduce(function(a,b){return a+b},0);
+    var gun=EPISODES.length?EPISODES[EPISODES.length-1].date:'';
+    return {eleme:'bu hafta',oto:true,adaylar:ad.map(function(n,i){
+      var g=Math.round((GUC[n]||0)*100);
+      return {n:n,p:Math.round(ex[i]/t*100),neden:(C.potaN[n]||0)+'. potası · '+(C.solo[n]||0)+' bireysel/kaptanlık galibiyeti · '+(C.cur[n]||0)+' puan · takım gücü '+(g>0?'+':'')+g};
+    }),not:'Otomatik tahmin ('+gun+' verisiyle): düşük puan, az bireysel galibiyet, düşük takım gücü ve çok pota riski artırır. Şef yorumu ve tabak kalitesi bilinmez; kaba bir sıralamadır.'};
+  }
+  function tahminCiz(C){
     var box=document.getElementById('tahmin');
-    if(!TAHMIN||!TAHMIN.adaylar||!TAHMIN.adaylar.length){box.hidden=true;box.innerHTML='';return}
-    var L=TAHMIN.adaylar.slice().sort(function(a,b){return (b.p||0)-(a.p||0)});
+    var T=TAHMIN;
+    var simdiki=C?Object.keys(C.potada).sort().join('|'):'';
+    var eski=!T||!T.adaylar||!T.adaylar.length||(C&&T.adaylar.map(function(a){return a.n}).sort().join('|')!==simdiki&&
+      !EPISODES.some(function(ep){return ep.date===T.eleme&&ep===EPISODES[EPISODES.length-1]}));
+    if(eski&&C)T=otoTahmin(C);
+    if(!T||!T.adaylar||!T.adaylar.length){box.hidden=true;box.innerHTML='';return}
+    var TAHMIN_=T;
+    var L=T.adaylar.slice().sort(function(a,b){return (b.p||0)-(a.p||0)});
     var elenen=null;
     EPISODES.forEach(function(ep){
-      if(ep.date!==TAHMIN.eleme)return;
+      if(ep.date!==T.eleme)return;
       ep.evs.forEach(function(ev){if(ev.type==='elendi'&&ev.who.length&&!elenen)elenen=ev.who[0]});
     });
     var sonuc='';
@@ -705,7 +726,7 @@
       sonuc='<span class="th-sonuc'+(tuttu?'':' no')+'">'+(tuttu?'TUTTU':'TUTMADI')+'</span>';
     }
     function risk(p){return p>=22?'r-yuksek':p>=16?'r-orta':p>=8?'r-notr':'r-dusuk'}
-    box.innerHTML='<div class="th-k"><span>Eleme tahmini · '+esc(TAHMIN.eleme||'')+'</span>'+sonuc+'</div><div class="th-grid">'+
+    box.innerHTML='<div class="th-k"><span>Eleme tahmini · '+esc(T.eleme||'')+(T.oto?' · otomatik':'')+'</span>'+sonuc+'</div><div class="th-grid">'+
       L.map(function(a){
         var p=Math.max(0,Math.min(100,+a.p||0)), out=(elenen&&a.n===elenen);
         return '<div class="th-row '+risk(p)+(out?' out':'')+'">'+
@@ -713,7 +734,7 @@
           '<div class="th-bar"><i style="width:'+p+'%"></i></div>'+
           (a.neden?'<p>'+esc(a.neden)+'</p>':'')+'</div>';
       }).join('')+'</div>'+
-      (TAHMIN.not?'<div class="th-not">'+esc(TAHMIN.not)+'</div>':'');
+      (T.not?'<div class="th-not">'+esc(T.not)+'</div>':'');
     box.hidden=false;
   }
 
